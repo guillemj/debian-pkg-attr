@@ -1,0 +1,78 @@
+attr (2.0.7-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Sat, 13 Apr 2002 09:45:06 +1000
+
+attr (2.0.6-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Tue, 26 Mar 2002 15:13:49 +1100
+
+attr (2.0.5-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Tue, 12 Mar 2002 09:31:30 +1100
+
+attr (2.0.3-1) unstable; urgency=low
+
+  * Major new upstream release
+  * Uses the new official ext2/ext3/XFS extended attributes interfaces
+  * Several system call changes - THIS WILL NOT WORK WITH OLD KERNELS!
+    (because old kernels use unreserved, unofficial system calls)
+  * Introduction of a new package (libattr) requested by ACL upstream
+    for new POSIX ACL packages; this is in addition to the existing
+    attr and attr-dev packages this source generates
+
+ -- Nathan Scott <nathans@debian.org>  Tue, 26 Feb 2002 13:25:26 +1100
+
+attr (1.1.3-0) unstable; urgency=low
+
+  * New release to fix system call issue on PowerPC
+
+ -- Nathan Scott <nathans@debian.org>  Fri,  3 Aug 2001 11:06:55 +1000
+
+attr (1.1.2-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Nathan Scott <nathans@debian.org>  Fri, 27 Jul 2001 07:59:49 +1000
+
+attr (1.1.1-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Nathan Scott <nathans@debian.org>  Mon, 23 Jul 2001 10:27:37 +1000
+
+attr (1.1.0-0) unstable; urgency=low
+
+  * Reworked package slightly so that its not Debian native
+  * Debian-specific changes now documented in changelog.Debian.gz
+  * New upstream release (see /usr/share/doc/attr/changelog.gz)
+  * Checked standards compliance - update standards version to 3.5.5
+
+ -- Nathan Scott <nathans@debian.org>  Mon, 16 Jul 2001 18:14:56 +1000
+
+attr (1.0.4) unstable; urgency=low
+
+  * Work around syscall number collision on recent ia64 kernels
+
+ -- Nathan Scott <nathans@debian.org>  Mon,  2 Jul 2001 13:02:02 +1000
+
+attr (1.0.3) unstable; urgency=low
+
+  * Updates to man pages.
+
+ -- Nathan Scott <nathans@debian.org>  Fri, 18 May 2001 15:47:54 +1000
+
+attr (1.0.2) unstable; urgency=low
+
+  * Initial release.
+
+ -- Nathan Scott <nathans@debian.org>  Wed, 25 Apr 2001 12:19:15 +1000
+
+Local variables:
+mode: debian-changelog
+End:
