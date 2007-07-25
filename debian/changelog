@@ -1,3 +1,11 @@
+attr (1:2.4.32-1.2) unstable; urgency=low
+
+  * Non-maintainer upload (porter NMU).
+  * add armel support, Closes: #421627
+  * fix kfreebsd build, Closes: #414232
+
+ -- Riku Voipio <riku.voipio@iki.fi>  Wed, 25 Jul 2007 23:33:58 +0300
+
 attr (1:2.4.32-1.1) unstable; urgency=emergency
 
   * Non-maintainer upload.
