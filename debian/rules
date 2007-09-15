@@ -21,6 +21,8 @@ build: built
 built: config
 	@echo "== dpkg-buildpackage: build" 1>&2
 	$(MAKE) default
+	rm -f po/attr.pot
+	$(MAKE) -C po attr.pot
 	touch built
 
 config: .census
