@@ -2,9 +2,10 @@ Source: attr
 Section: utils
 Priority: optional
 Maintainer: Nathan Scott <nathans@debian.org>
-Uploaders: Anibal Monsalve Salazar <anibal@debian.org>
+Uploaders: Niv Sardi <xaiki@debian.org>, Anibal Monsalve Salazar <anibal@debian.org>
 Build-Depends: autoconf, debhelper (>= 5), gettext, libtool
-Standards-Version: 3.7.2
+Standards-Version: 3.7.3
+Homepage: http://oss.sgi.com/projects/xfs/
 
 Package: attr
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -15,8 +16,6 @@ Description: Utilities for manipulating filesystem extended attributes
  objects, in particular getfattr(1) and setfattr(1).
  An attr(1) command is also provided which is largely compatible
  with the SGI IRIX tool of the same name.
- .
-  Homepage: http://oss.sgi.com/projects/xfs/
 
 Package: libattr1-dev
 Section: libdevel
@@ -35,8 +34,6 @@ Description: Extended attribute static libraries and headers
  Currently only ext2, ext3, JFS and XFS support extended attributes.
  The SGI IRIX compatibility API built above the Linux system calls is
  used by programs such as xfsdump(8), xfsrestore(8) and xfs_fsr(8).
- .
-  Homepage: http://oss.sgi.com/projects/xfs/
 
 Package: libattr1
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -47,5 +44,3 @@ Architecture: any
 Description: Extended attribute shared library
  Contains the runtime environment required by programs that make use
  of extended attributes.
- .
-  Homepage: http://oss.sgi.com/projects/xfs/
