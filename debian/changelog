@@ -1,3 +1,11 @@
+attr (1:2.4.43-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated debian/watch
+  * Standards version is 3.8.0
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 03 Jul 2008 13:49:43 +1000
+
 attr (1:2.4.41-1) unstable; urgency=low
 
   * New upstream release
@@ -21,8 +29,8 @@ attr (1:2.4.39-1) unstable; urgency=low
     - Added homepage
     - Added myself as comaintainer
     - Set Standards-Version to 3.7.2
-    - libacl1-dev depends on libacl1 (= ${binary:Version})
-    - acl and libacl1 depend on ${misc:Depends}
+    - libattr1-dev depends on libattr1 (= ${binary:Version})
+    - attr and libattr1 depend on ${misc:Depends}
   * debian/watch: Added
   * include/buildrules: Drop --omit-header from xgettext call, so that the
     generated POT file becomes valid.
