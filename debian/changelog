@@ -1,3 +1,9 @@
+attr (1:2.4.43-2) unstable; urgency=high
+
+  * Remove --enable-lib64=yes in Makefile (closes: #514017)
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 10 Feb 2009 20:32:30 +1100
+
 attr (1:2.4.43-1) unstable; urgency=low
 
   * New upstream release
