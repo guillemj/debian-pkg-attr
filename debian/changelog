@@ -1,3 +1,20 @@
+attr (1:2.4.43-3) unstable; urgency=low
+
+  [ Cyril Brulebois ]
+  * Backport the following fix by Petr Salinger from upstream to fix
+    FTBFS on GNU/kFreeBSD (Closes: #531950): [git commit b4636a4e9e]
+    On Linux, ENOATTR aliases to ENODATA. On other operating systems
+    like Irix and BSD*, ENOATTR is a separate error number. Therefore,
+    protect the check on “err == ENODATA” with “#ifdef __linux__” in
+    strerror_ea() in both getfattr/getfattr.c and setfattr/setfattr.c
+
+  [ Anibal Monsalve Salazar ]
+  * Standards version is 3.8.2
+  * DH compatibility level is 7
+  * Fix "incorrect-libdir-in-la-file usr/lib/libattr.la /lib != /usr/lib"
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 27 Jun 2009 00:29:24 +1000
+
 attr (1:2.4.43-2) unstable; urgency=high
 
   * Remove --enable-lib64=yes in Makefile (closes: #514017)

@@ -50,6 +50,9 @@ binary-arch: checkroot built
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C build src-manifest
 
+	sed "s/^libdir='\/lib'$$/libdir='\/usr\/lib'/" $(dirdev)/usr/lib/libattr.la > $(dirdev)/usr/lib/libattr.la.new
+	mv $(dirdev)/usr/lib/libattr.la.new $(dirdev)/usr/lib/libattr.la
+
 	-rm -rf $(dirdev)/usr/share/doc/attr
 	-rm -rf $(dirlib)/usr/share/doc/attr
 
