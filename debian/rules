@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export DH_VERBOSE=1
+
 package = attr
 develop = lib$(package)1-dev
 library = lib$(package)1
@@ -55,6 +57,9 @@ binary-arch: checkroot built
 
 	-rm -rf $(dirdev)/usr/share/doc/attr
 	-rm -rf $(dirlib)/usr/share/doc/attr
+	-rm -rf $(dirlib)/usr/share/locale
+	-rm -rf $(dirlib)/usr/share/man
+	-rm -rf $(dirlib)/usr/bin
 
 	dh_installdocs
 	dh_installchangelogs

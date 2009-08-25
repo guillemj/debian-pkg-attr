@@ -1,2 +1,2 @@
 version=3
-ftp://oss.sgi.com/projects/xfs/cmd_tars/ attr_([\d]+[\d\.]*)-[\d].tar.gz
+http://download.savannah.gnu.org/releases-noredirect/attr/ attr-([\d]+[\d\.]*).src.tar.gz

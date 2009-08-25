@@ -3,9 +3,11 @@ Section: utils
 Priority: optional
 Maintainer: Nathan Scott <nathans@debian.org>
 Uploaders: Niv Sardi <xaiki@debian.org>, Anibal Monsalve Salazar <anibal@debian.org>
-Build-Depends: autoconf, debhelper (>= 7), gettext, libtool
-Standards-Version: 3.8.2
-Homepage: http://oss.sgi.com/projects/xfs/
+Build-Depends: autoconf, automake, debhelper (>= 7), gettext, libtool
+Standards-Version: 3.8.3
+Homepage: http://savannah.nongnu.org/projects/attr/
+Vcs-Git: git://git.savannah.nongnu.org/attr.git
+Vcs-Browser: http://git.savannah.gnu.org/cgit/attr.git
 
 Package: attr
 Depends: ${shlibs:Depends}, ${misc:Depends}

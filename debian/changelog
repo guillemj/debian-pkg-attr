@@ -1,3 +1,16 @@
+attr (1:2.4.44-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix out-of-date-standards-version
+  * Fix copyright-refers-to-versionless-license-file
+  * Update homepage in debian/control
+  * Add Vcs-Git and Vcs-Browser to debian/control
+  * Update download page in debian/copyright
+  * Update debian/watch
+  * Add automake as a build-dependency
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 25 Aug 2009 11:23:53 +1000
+
 attr (1:2.4.43-3) unstable; urgency=low
 
   [ Cyril Brulebois ]
