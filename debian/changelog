@@ -1,3 +1,17 @@
+attr (1:2.4.44-2) unstable; urgency=low
+
+  * Source format is 3.0 (quilt)
+  * Add upstream patches 
+    02-fix_memory_leak_in_attr_copy_action.patch
+    03-pull_in_string.h.patch
+    05-eliminate_a_memory_leak.patch
+    06-eliminate_a_double_free.patch
+    07-fix_thinko_in_restore.patch
+  * Fix debhelper-but-no-misc-depends
+  * Fix out-of-date-standards-version
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 08 Jun 2010 13:58:30 +1000
+
 attr (1:2.4.44-1) unstable; urgency=low
 
   * New upstream release

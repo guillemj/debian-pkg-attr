@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Nathan Scott <nathans@debian.org>
 Uploaders: Niv Sardi <xaiki@debian.org>, Anibal Monsalve Salazar <anibal@debian.org>
 Build-Depends: autoconf, automake, debhelper (>= 7), gettext, libtool
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 Homepage: http://savannah.nongnu.org/projects/attr/
 Vcs-Git: git://git.savannah.nongnu.org/attr.git
 Vcs-Browser: http://git.savannah.gnu.org/cgit/attr.git
@@ -22,7 +22,7 @@ Description: Utilities for manipulating filesystem extended attributes
 Package: libattr1-dev
 Section: libdevel
 Priority: extra
-Depends: libc6-dev | libc-dev, libattr1 (= ${binary:Version})
+Depends: ${misc:Depends}, libc6-dev | libc-dev, libattr1 (= ${binary:Version})
 Provides: attr-dev
 Replaces: attr-dev
 Conflicts: attr-dev, attr (<< 2.0.0)
