@@ -15,8 +15,16 @@ pkglib = DIST_ROOT=`pwd`/$(dirlib); export DIST_ROOT;
 stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
-	  INSTALL_USER=root INSTALL_GROUP=root ;
+	  INSTALL_USER=root INSTALL_GROUP=root \
+	  CONFIG_SHELL=/bin/bash ;
 checkdir = test -f debian/rules
+
+DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+ifneq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+        LOCAL_CONFIGURE_OPTIONS += --host $(DEB_HOST_GNU_TYPE) --build $(DEB_BUILD_GNU_TYPE)
+endif
 
 build: built
 built: config
@@ -30,7 +38,7 @@ config: .census
 .census:
 	@echo "== dpkg-buildpackage: configure" 1>&2
 	$(checkdir)
-	$(options) $(MAKE) configure
+	$(options) $(MAKE) configure LOCAL_CONFIGURE_OPTIONS="$(LOCAL_CONFIGURE_OPTIONS)"
 	touch .census
 
 clean:

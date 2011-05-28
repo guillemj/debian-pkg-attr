@@ -1,3 +1,11 @@
+attr (1:2.4.44-3) unstable; urgency=medium
+
+  * Add myself as comaintainer
+  * Use bash in build process (Closes: #621927)
+  * Pass host & build to allow cross builds to succeed (Closes: #284044) 
+
+ -- Luk Claes <luk@debian.org>  Sat, 28 May 2011 15:48:08 +0200
+
 attr (1:2.4.44-2) unstable; urgency=low
 
   * Source format is 3.0 (quilt)
