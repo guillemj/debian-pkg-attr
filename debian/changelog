@@ -1,3 +1,11 @@
+attr (1:2.4.46-1) unstable; urgency=low
+
+  * New upstream release (Closes: #626622).
+  - All patches are incorporated upstream.
+  * Add multiarch support (Closes: #528141).
+
+ -- Luk Claes <luk@debian.org>  Fri, 24 Jun 2011 07:37:19 +0200
+
 attr (1:2.4.44-3) unstable; urgency=medium
 
   * Add myself as comaintainer

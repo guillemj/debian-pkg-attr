@@ -21,10 +21,15 @@ checkdir = test -f debian/rules
 
 DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 ifneq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
         LOCAL_CONFIGURE_OPTIONS += --host $(DEB_HOST_GNU_TYPE) --build $(DEB_BUILD_GNU_TYPE)
 endif
+
+LOCAL_CONFIGURE_OPTIONS += \
+		--libdir=/lib/$(DEB_HOST_MULTIARCH) \
+		--libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 build: built
 built: config
@@ -60,8 +65,8 @@ binary-arch: checkroot built
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C build src-manifest
 
-	sed "s/^libdir='\/lib'$$/libdir='\/usr\/lib'/" $(dirdev)/usr/lib/libattr.la > $(dirdev)/usr/lib/libattr.la.new
-	mv $(dirdev)/usr/lib/libattr.la.new $(dirdev)/usr/lib/libattr.la
+	sed -i -e "s,^libdir='/lib/$(DEB_HOST_MULTIARCH)'$$,libdir='/usr/lib/$(DEB_HOST_MULTIARCH)'," \
+		$(dirdev)/usr/lib/$(DEB_HOST_MULTIARCH)/libattr.la
 
 	-rm -rf $(dirdev)/usr/share/doc/attr
 	-rm -rf $(dirlib)/usr/share/doc/attr
