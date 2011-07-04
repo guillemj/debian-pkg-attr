@@ -1,3 +1,14 @@
+attr (1:2.4.46-2) unstable; urgency=low
+
+  * Append 'libattr 1 libattr1 (>= 2.4.46-2)' to
+    debian/libattr1/DEBIAN/shlibs
+  * Remove debian/{attr,libattr1,libattr1-dev}.debhelper.log
+  * Set standards-version to 3.9.2
+  * Pass "-Zbzip2 -z9" to dpkg-deb
+  * Fix debian-rules-missing-recommended-target
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 04 Jul 2011 21:29:12 +1000
+
 attr (1:2.4.46-1) unstable; urgency=low
 
   * New upstream release (Closes: #626622).

@@ -1,10 +1,10 @@
 Source: attr
 Section: utils
 Priority: optional
-Maintainer: Nathan Scott <nathans@debian.org>
-Uploaders: Niv Sardi <xaiki@debian.org>, Anibal Monsalve Salazar <anibal@debian.org>, Luk Claes <luk@debian.org>
+Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Uploaders: Nathan Scott <nathans@debian.org>, Luk Claes <luk@debian.org>
 Build-Depends: autoconf, automake, debhelper (>= 8.1.3), gettext, libtool
-Standards-Version: 3.8.4
+Standards-Version: 3.9.2
 Homepage: http://savannah.nongnu.org/projects/attr/
 Vcs-Git: git://git.savannah.nongnu.org/attr.git
 Vcs-Browser: http://git.savannah.gnu.org/cgit/attr.git
