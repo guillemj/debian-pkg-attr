@@ -67,8 +67,8 @@ binary-arch: checkroot built
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C build src-manifest
 
-	sed -i -e "s,^libdir='/lib/$(DEB_HOST_MULTIARCH)'$$,libdir='/usr/lib/$(DEB_HOST_MULTIARCH)'," \
-		$(dirdev)/usr/lib/$(DEB_HOST_MULTIARCH)/libattr.la
+	rm -f $(dirdev)/usr/lib/$(DEB_HOST_MULTIARCH)/libattr.la
+	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libattr.la
 
 	-rm -rf $(dirdev)/usr/share/doc/attr
 	-rm -rf $(dirlib)/usr/share/doc/attr
@@ -82,13 +82,15 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libattr1 (>= 2.4.46-2)'
+	dh_makeshlibs -p $(library) -V 'libattr1 (>= 2.4.46-3)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
 
 	dh_md5sums
-	dh_builddeb -- -Zbzip2 -z9
+	dh_builddeb -p$(package) -- -Zbzip2 -z9
+	dh_builddeb -p$(develop) -- -Zbzip2 -z9
+	dh_builddeb -p$(library)
 
 binary: binary-indep binary-arch
 
