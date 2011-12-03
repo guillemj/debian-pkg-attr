@@ -1,3 +1,9 @@
+attr (1:2.4.46-5) unstable; urgency=low
+
+  * Add Debian epoch version to shlibs dependency.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 03 Dec 2011 22:04:54 +1100
+
 attr (1:2.4.46-4) unstable; urgency=low
 
   * Mark libattr1-dev Multi-Arch: same
