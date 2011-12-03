@@ -28,6 +28,7 @@ Provides: attr-dev
 Replaces: attr-dev
 Conflicts: attr-dev, attr (<< 2.0.0)
 Architecture: any
+Multi-Arch: same
 Description: Extended attribute static libraries and headers
  attr-dev contains the libraries and header files needed to develop
  programs which make use of extended attributes.  For Linux programs,

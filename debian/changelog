@@ -1,3 +1,15 @@
+attr (1:2.4.46-4) unstable; urgency=low
+
+  * Mark libattr1-dev Multi-Arch: same
+    Patch by Steve Langasek
+    Closes: 647855
+  * Build if autconf2.13 is installed
+    Add 12-643587-attr-autoconf-version-check.patch
+    Patch by Wookey
+    Closes: 643587
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 03 Dec 2011 21:25:23 +1100
+
 attr (1:2.4.46-3) unstable; urgency=medium
 
   * libattr1: Don't pass "-Zbzip2 -z9" to dpkg-deb
