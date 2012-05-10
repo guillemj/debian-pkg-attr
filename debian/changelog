@@ -1,3 +1,14 @@
+attr (1:2.4.46-7) unstable; urgency=low
+
+  * Build-depend on gettext. If it build-depends on gettext:any,
+    the auto-builders stop with the message below.
+    Dependency installability problem for attr on armel, armhf, hurd-i386,
+    kfreebsd-amd64, kfreebsd-i386, mips, powerpc, s390, s390x and sparc:
+    attr (= 1:2.4.46-6) build-depends on missing:
+    - not-existing-build-dependency-for-any
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 10 May 2012 17:35:17 +1000
+
 attr (1:2.4.46-6) unstable; urgency=low
 
   * Merge 1:2.4.46-5ubuntu1

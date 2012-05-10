@@ -82,7 +82,7 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libattr1 (>= 1:2.4.46-6)'
+	dh_makeshlibs -p $(library) -V 'libattr1 (>= 1:2.4.46-7)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
