@@ -16,7 +16,7 @@ stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  INSTALL_USER=root INSTALL_GROUP=root \
-	  CONFIG_SHELL=/bin/bash ;
+	  CONFIG_SHELL=/bin/sh ;
 checkdir = test -f debian/rules
 
 DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
@@ -82,7 +82,7 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libattr1 (>= 1:2.4.46-5)'
+	dh_makeshlibs -p $(library) -V 'libattr1 (>= 1:2.4.46-6)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol

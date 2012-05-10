@@ -1,3 +1,22 @@
+attr (1:2.4.46-6) unstable; urgency=low
+
+  * Merge 1:2.4.46-5ubuntu1
+    - Build-depend on gettext:any, since we only need it to run tools at
+      build-time.
+  * Use /bin/sh as CONFIG_SHELL in debian/rules
+    Closes: #671903
+  * Fix out-of-date-standards-version
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 10 May 2012 13:21:50 +1000
+
+attr (1:2.4.46-5ubuntu1) precise; urgency=low
+
+  * Merge from Debian testing, remaining changes:
+    - Build-depend on gettext:any, since we only need it to run tools at
+      build-time.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 17 Dec 2011 19:49:26 -0800
+
 attr (1:2.4.46-5) unstable; urgency=low
 
   * Add Debian epoch version to shlibs dependency.
@@ -15,6 +34,13 @@ attr (1:2.4.46-4) unstable; urgency=low
     Closes: 643587
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 03 Dec 2011 21:25:23 +1100
+
+attr (1:2.4.46-3ubuntu1) precise; urgency=low
+
+  * Build-depend on gettext:any, since we only need it to run tools at
+    build-time.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 05 Nov 2011 17:34:57 +0000
 
 attr (1:2.4.46-3) unstable; urgency=medium
 
@@ -404,6 +430,3 @@ attr (1.0.2) unstable; urgency=low
 
  -- Nathan Scott <nathans@debian.org>  Wed, 25 Apr 2001 12:19:15 +1000
 
-Local variables:
-mode: debian-changelog
-End:
