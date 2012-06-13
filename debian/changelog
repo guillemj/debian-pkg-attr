@@ -1,3 +1,11 @@
+attr (1:2.4.46-8) unstable; urgency=low
+
+  * Enable hardening build flags 
+    Closes: #674003
+  * DH compatibility level is 9
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Wed, 13 Jun 2012 17:52:45 +1000
+
 attr (1:2.4.46-7) unstable; urgency=low
 
   * Build-depend on gettext. If it build-depends on gettext:any,
