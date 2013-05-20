@@ -1,9 +1,18 @@
-attr (1:2.4.46-8.1) experimental; urgency=low
+attr (1:2.4.47-1) unstable; urgency=low
 
-  * experimental upload with permission from maintainer to verify that
-    using syscalls.h causes no regressions. Added patch riku-syscall-fix.patch
+  * New upstream release 2.4.47
+    Fix "getfattr should indicate missing xattrs via exit value"
+    Closes: #520659
+  * Update debian/rules
+    Upstream renamed build/ to package/
+  * Upstream renamed configure.in to configure.ac and didn't ship it.
+    Add 01-configure.in.patch
+  * Fix missing ldflags
+    Add 02-687531-fix-missing-ldflags.patch
+    Patch by Simon Ruderich
+    Closes: #687531
 
- -- Riku Voipio <riku.voipio@linaro.org>  Fri, 22 Mar 2013 08:42:09 +0200
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 20 May 2013 19:07:56 +1000
 
 attr (1:2.4.46-8) unstable; urgency=low
 

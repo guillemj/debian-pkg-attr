@@ -69,7 +69,7 @@ binary-arch: checkroot built
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
-	$(pkgme)  $(MAKE) -C build src-manifest
+	$(pkgme)  $(MAKE) -C package src-manifest
 
 	rm -f $(dirdev)/usr/lib/$(DEB_HOST_MULTIARCH)/libattr.la
 	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libattr.la
