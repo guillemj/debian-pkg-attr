@@ -2,12 +2,12 @@ Source: attr
 Section: utils
 Priority: optional
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Uploaders: Nathan Scott <nathans@debian.org>, Luk Claes <luk@debian.org>
+Uploaders: Nathan Scott <nathans@debian.org>
 Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autoconf, automake, gettext, libtool
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://savannah.nongnu.org/projects/attr/
-Vcs-Git: git://git.savannah.nongnu.org/attr.git
-Vcs-Browser: http://git.savannah.gnu.org/cgit/attr.git
+#Vcs-Git: git://git.savannah.nongnu.org/attr.git
+#Vcs-Browser: http://git.savannah.gnu.org/cgit/attr.git
 
 Package: attr
 Depends: ${shlibs:Depends}, ${misc:Depends}, libattr1 (= ${binary:Version})
@@ -50,3 +50,19 @@ Pre-Depends: ${misc:Pre-Depends}
 Description: Extended attribute shared library
  Contains the runtime environment required by programs that make use
  of extended attributes.
+
+Package: attr-udeb
+Package-Type: udeb
+Depends: ${shlibs:Depends}, ${misc:Depends}, libattr1-udeb (= ${binary:Version})
+Section: debian-installer
+Architecture: any
+Multi-Arch: foreign
+Description: Utilities for manipulating filesystem extended attributes
+
+Package: libattr1-udeb
+Package-Type: udeb
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: debian-installer
+Architecture: any
+Multi-Arch: same
+Description: Extended attribute shared library

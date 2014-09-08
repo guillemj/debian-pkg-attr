@@ -1,3 +1,19 @@
+attr (1:2.4.47-2) unstable; urgency=medium
+
+  * Standards-Version: 3.9.5.
+  * Remove Luk Claes as uploader.
+    Closes: #748493.
+  * Add attr-udeb and libattr1-udeb binary packages, for use by
+    live-installer to copy extended attributes.
+    Patch by Colin Watson.
+    Closes: #744037.
+  * Omit Vcs-* fields.
+    Closes: #744028.
+  * Use default compression for binary packages.
+  * Refresh patches.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 08 Sep 2014 08:27:07 +0100
+
 attr (1:2.4.47-1) unstable; urgency=low
 
   * New upstream release 2.4.47

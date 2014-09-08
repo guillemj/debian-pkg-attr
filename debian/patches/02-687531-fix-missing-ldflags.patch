@@ -2,8 +2,10 @@ Description: Use build flags from environment (dpkg-buildflags).
  Necessary for hardening flags.
 Author: Simon Ruderich <simon@ruderich.org>
 
---- a/libmisc/Makefile	2013-05-01 00:26:03.000000000 +1000
-+++ b/libmisc/Makefile	2013-05-20 19:29:55.000000000 +1000
+Index: attr-2.4.47/libmisc/Makefile
+===================================================================
+--- attr-2.4.47.orig/libmisc/Makefile
++++ attr-2.4.47/libmisc/Makefile
 @@ -20,7 +20,9 @@ TOPDIR = ..
  include $(TOPDIR)/include/builddefs
  

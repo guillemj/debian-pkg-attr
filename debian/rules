@@ -13,13 +13,19 @@ include /usr/share/dpkg/buildflags.mk
 package = attr
 develop = lib$(package)1-dev
 library = lib$(package)1
+udeb    = $(package)-udeb
+libudeb = $(library)-udeb
 
 dirme  = debian/$(package)
 dirdev = debian/$(develop)
 dirlib = debian/$(library)
+diru   = debian/$(udeb)
+dirlu  = debian/$(libudeb)
 pkgme  = DIST_ROOT=`pwd`/$(dirme);  export DIST_ROOT;
 pkgdev = DIST_ROOT=`pwd`/$(dirdev); export DIST_ROOT;
 pkglib = DIST_ROOT=`pwd`/$(dirlib); export DIST_ROOT;
+pkgu   = DIST_ROOT=`pwd`/$(diru);   export DIST_ROOT;
+pkglu  = DIST_ROOT=`pwd`/$(dirlu);  export DIST_ROOT;
 stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
@@ -57,7 +63,7 @@ clean:
 	$(checkdir)
 	-rm -f built .census
 	$(MAKE) distclean
-	-rm -rf $(dirme) $(dirdev) $(dirlib) debian/tmp
+	-rm -rf $(dirme) $(dirdev) $(dirlib) $(diru) $(dirlu) debian/tmp
 	-rm -f debian/*substvars debian/files* debian/*.debhelper
 
 binary-indep:
@@ -69,6 +75,8 @@ binary-arch: checkroot built
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
+	$(pkgu)   $(MAKE) -C . install
+	$(pkglu)  $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C package src-manifest
 
 	rm -f $(dirdev)/usr/lib/$(DEB_HOST_MULTIARCH)/libattr.la
@@ -79,6 +87,8 @@ binary-arch: checkroot built
 	-rm -rf $(dirlib)/usr/share/locale
 	-rm -rf $(dirlib)/usr/share/man
 	-rm -rf $(dirlib)/usr/bin
+	-rm -rf $(diru)/usr/share
+	-rm -rf $(dirlu)/usr
 
 	dh_installdocs
 	dh_installchangelogs
@@ -86,15 +96,13 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libattr1 (>= 1:2.4.46-8)'
+	dh_makeshlibs -p $(library) -V 'libattr1 (>= 1:2.4.46-8)' --add-udeb libattr1-udeb
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
 
 	dh_md5sums
-	dh_builddeb -p$(package) -- -Zbzip2 -z9
-	dh_builddeb -p$(develop) -- -Zbzip2 -z9
-	dh_builddeb -p$(library)
+	dh_builddeb
 
 binary: binary-indep binary-arch
 

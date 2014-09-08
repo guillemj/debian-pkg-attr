@@ -1,5 +1,7 @@
---- a/configure.in	2013-05-20 18:45:39.675605034 +1000
-+++ b/configure.in	2013-05-20 21:05:50.000000000 +1000
+Index: attr-2.4.47/configure.in
+===================================================================
+--- /dev/null
++++ attr-2.4.47/configure.in
 @@ -0,0 +1,48 @@
 +# Copyright (C) 2009  Andreas Gruenbacher <agruen@suse.de>
 +#
