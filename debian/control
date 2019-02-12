@@ -56,7 +56,6 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
 Section: libs
-Priority: required
 Architecture: any
 Multi-Arch: same
 Pre-Depends:
