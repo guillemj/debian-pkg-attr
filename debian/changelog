@@ -21,6 +21,8 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
     - Use dpkg architecture.mk fragment instead of ad-hoc variable assignment.
     - Use dh_testdir instead of open-coding it.
     - Use dh_testroot instead of open-coding it.
+    - Use dh_clean instead of ad-hoc cleaning, and remove upstream
+      configure.lineno in debian/clean. Closes: #867266
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 

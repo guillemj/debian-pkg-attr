@@ -57,8 +57,7 @@ clean:
 	dh_testdir
 	-rm -f built .census
 	$(MAKE) distclean
-	-rm -rf $(dirme) $(dirdev) $(dirlib) $(diru) $(dirlu) debian/tmp
-	-rm -f debian/*substvars debian/files* debian/*.debhelper
+	dh_clean
 
 binary-indep:
 
