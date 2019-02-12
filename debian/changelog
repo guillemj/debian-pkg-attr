@@ -23,6 +23,7 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
     - Use dh_testroot instead of open-coding it.
     - Use dh_clean instead of ad-hoc cleaning, and remove upstream
       configure.lineno in debian/clean. Closes: #867266
+    - Do not create an upstream source tarball distribution.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 

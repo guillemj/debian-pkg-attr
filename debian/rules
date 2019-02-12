@@ -71,7 +71,6 @@ binary-arch: built
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgu)   $(MAKE) -C . install
 	$(pkglu)  $(MAKE) -C . install-lib
-	$(pkgme)  $(MAKE) -C package src-manifest
 
 	rm -f $(dirdev)/usr/lib/$(DEB_HOST_MULTIARCH)/libattr.la
 	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libattr.la
