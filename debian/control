@@ -19,8 +19,6 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libattr1 (= ${binary:Version}),
-Conflicts:
- xfsdump (<< 2.0.0),
 Architecture: any
 Multi-Arch: foreign
 Description: Utilities for manipulating filesystem extended attributes
@@ -42,7 +40,6 @@ Replaces:
  attr-dev,
 Conflicts:
  attr-dev,
- attr (<< 2.0.0),
 Architecture: any
 Multi-Arch: same
 Description: Extended attribute static libraries and headers
@@ -61,8 +58,6 @@ Depends:
  ${misc:Depends},
 Section: libs
 Priority: required
-Conflicts:
- attr (<< 2.0.0),
 Architecture: any
 Multi-Arch: same
 Pre-Depends:
