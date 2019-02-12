@@ -21,11 +21,11 @@ dirdev = debian/$(develop)
 dirlib = debian/$(library)
 diru   = debian/$(udeb)
 dirlu  = debian/$(libudeb)
-pkgme  = DIST_ROOT=`pwd`/$(dirme);  export DIST_ROOT;
-pkgdev = DIST_ROOT=`pwd`/$(dirdev); export DIST_ROOT;
-pkglib = DIST_ROOT=`pwd`/$(dirlib); export DIST_ROOT;
-pkgu   = DIST_ROOT=`pwd`/$(diru);   export DIST_ROOT;
-pkglu  = DIST_ROOT=`pwd`/$(dirlu);  export DIST_ROOT;
+pkgme  = DIST_ROOT=$(CURDIR)/$(dirme);  export DIST_ROOT;
+pkgdev = DIST_ROOT=$(CURDIR)/$(dirdev); export DIST_ROOT;
+pkglib = DIST_ROOT=$(CURDIR)/$(dirlib); export DIST_ROOT;
+pkgu   = DIST_ROOT=$(CURDIR)/$(diru);   export DIST_ROOT;
+pkglu  = DIST_ROOT=$(CURDIR)/$(dirlu);  export DIST_ROOT;
 stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
