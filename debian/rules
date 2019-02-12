@@ -24,7 +24,6 @@ pkgdev = DIST_ROOT=$(CURDIR)/$(dirdev); export DIST_ROOT;
 pkglib = DIST_ROOT=$(CURDIR)/$(dirlib); export DIST_ROOT;
 pkgu   = DIST_ROOT=$(CURDIR)/$(diru);   export DIST_ROOT;
 pkglu  = DIST_ROOT=$(CURDIR)/$(dirlu);  export DIST_ROOT;
-stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  INSTALL_USER=root INSTALL_GROUP=root \
