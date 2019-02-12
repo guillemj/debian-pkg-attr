@@ -22,7 +22,7 @@ Depends:
  libattr1 (= ${binary:Version}),
 Architecture: any
 Multi-Arch: foreign
-Description: Utilities for manipulating filesystem extended attributes
+Description: utilities for manipulating filesystem extended attributes
  A set of tools for manipulating extended attributes on filesystem
  objects, in particular getfattr(1) and setfattr(1).
  An attr(1) command is also provided which is largely compatible
@@ -42,13 +42,13 @@ Conflicts:
  attr-dev,
 Architecture: any
 Multi-Arch: same
-Description: Extended attribute static libraries and headers
- attr-dev contains the libraries and header files needed to develop
+Description: extended attributes handling - static libraries and headers
+ This package contains the libraries and header files needed to develop
  programs which make use of extended attributes.  For Linux programs,
  the documented system call API is the recommended interface, but an
  SGI IRIX compatibility interface is also provided.
  .
- Currently only ext2, ext3, JFS and XFS support extended attributes.
+ Currently most filesystems support extended attributes.
  The SGI IRIX compatibility API built above the Linux system calls is
  used by programs such as xfsdump(8), xfsrestore(8) and xfs_fsr(8).
 
@@ -61,7 +61,7 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends:
  ${misc:Pre-Depends},
-Description: Extended attribute shared library
+Description: extended attribute handling - shared library
  Contains the runtime environment required by programs that make use
  of extended attributes.
 
@@ -74,7 +74,7 @@ Depends:
 Section: debian-installer
 Architecture: any
 Multi-Arch: foreign
-Description: Utilities for manipulating filesystem extended attributes
+Description: utilities for manipulating filesystem extended attributes
 
 Package: libattr1-udeb
 Package-Type: udeb
@@ -84,4 +84,4 @@ Depends:
 Section: debian-installer
 Architecture: any
 Multi-Arch: same
-Description: Extended attribute shared library
+Description: extended attribute handling - shared library
