@@ -29,7 +29,6 @@ Description: Utilities for manipulating filesystem extended attributes
 
 Package: libattr1-dev
 Section: libdevel
-Priority: extra
 Depends:
  ${misc:Depends},
  libc6-dev | libc-dev,

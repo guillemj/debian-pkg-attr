@@ -13,6 +13,7 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
     - Switch to machine parseable format 1.0.
     - Update copyright statements.
   * Remove ancient Conflicts against xfsdump and attr.
+  * Remove obsolete Priority extra.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
