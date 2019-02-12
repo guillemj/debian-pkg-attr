@@ -11,7 +11,9 @@ include /usr/share/dpkg/buildflags.mk
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  CONFIG_SHELL=/bin/sh ;
 
-ifneq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+	confflags += --build=$(DEB_HOST_GNU_TYPE)
+else
 	confflags += --host $(DEB_HOST_GNU_TYPE) --build $(DEB_BUILD_GNU_TYPE)
 endif
 
