@@ -34,6 +34,8 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
   * Set Rules-Requires-Root to no, and stop setting INSTALL_USER and
     INSTALL_GROUP, as the build system will default to the current user.
   * Switch to Standards-Version 4.3.0.
+  * Stop installing man pages from section 2 and 5, those are maintained by
+    the manpages upstream project. Closes: #841719
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
