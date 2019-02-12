@@ -29,6 +29,8 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
       calling the upstream build system multiple times to install into the
       package dirs.
   * Switch to debhelper compatibility level 11.
+  * Set Rules-Requires-Root to no, and stop setting INSTALL_USER and
+    INSTALL_GROUP, as the build system will default to the current user.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
