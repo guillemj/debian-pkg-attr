@@ -7,6 +7,7 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
   * Update upstream URL (working and https) in debian/watch file.
   * Update debian/watch to format version 4.
   * Line-wrap and add a trailing comma to dependency field values.
+  * Update Homepage field URL to use https.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
