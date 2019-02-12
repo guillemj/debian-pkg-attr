@@ -29,7 +29,6 @@ stdenv = @GZIP=-q; export GZIP;
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  INSTALL_USER=root INSTALL_GROUP=root \
 	  CONFIG_SHELL=/bin/sh ;
-checkdir = test -f debian/rules
 
 ifneq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
         LOCAL_CONFIGURE_OPTIONS += --host $(DEB_HOST_GNU_TYPE) --build $(DEB_BUILD_GNU_TYPE)
@@ -50,12 +49,12 @@ built: config
 
 config: .census
 .census:
-	$(checkdir)
+	dh_testdir
 	$(options) $(MAKE) configure LOCAL_CONFIGURE_OPTIONS="$(LOCAL_CONFIGURE_OPTIONS)"
 	touch .census
 
 clean:
-	$(checkdir)
+	dh_testdir
 	-rm -f built .census
 	$(MAKE) distclean
 	-rm -rf $(dirme) $(dirdev) $(dirlib) $(diru) $(dirlu) debian/tmp
@@ -64,7 +63,7 @@ clean:
 binary-indep:
 
 binary-arch: checkroot built
-	$(checkdir)
+	dh_testdir
 	-rm -rf $(dirme) $(dirdev) $(dirlib)
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
