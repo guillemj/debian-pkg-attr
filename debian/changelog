@@ -36,6 +36,8 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
   * Switch to Standards-Version 4.3.0.
   * Stop installing man pages from section 2 and 5, those are maintained by
     the manpages upstream project. Closes: #841719
+  * Add a shared library symbols file. Closes: #677566
+    Thanks to Ivo De Decker <ivo.dedecker@ugent.be>.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
