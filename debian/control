@@ -10,7 +10,7 @@ Build-Depends:
  automake,
  gettext,
  libtool,
-Standards-Version: 3.9.5
+Standards-Version: 4.3.0
 Homepage: https://savannah.nongnu.org/projects/attr/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/attr.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/attr.git
