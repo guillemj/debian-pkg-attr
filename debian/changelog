@@ -2,6 +2,8 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
 
   * Salvage package, with ok from co-maintainer.
     Thanks for all their past work on this package. Closes: #921975
+  * Remove debian/Makefile and debian/configure.ac leftovers.
+    - Add patch to avoid upstream Makefile entering the debian/ directory.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 

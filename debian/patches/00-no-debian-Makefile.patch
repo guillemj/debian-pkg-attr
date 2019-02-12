@@ -1,0 +1,18 @@
+Description: Ignore the debian/ directory to not require a Makefile there.
+Author: Guillem Jover <guillem@debian.org>
+
+---
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/Makefile
++++ b/Makefile
+@@ -36,7 +36,7 @@ LDIRT = config.log .dep config.status co
+ 	Logs/* built .census install.* install-dev.* install-lib.* *.gz
+ 
+ LIB_SUBDIRS = include libmisc libattr
+-TOOL_SUBDIRS = attr getfattr setfattr examples test m4 man doc po debian package
++TOOL_SUBDIRS = attr getfattr setfattr examples test m4 man doc po package
+ 
+ SUBDIRS = $(LIB_SUBDIRS) $(TOOL_SUBDIRS)
+ 
