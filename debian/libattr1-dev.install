@@ -1,0 +1,5 @@
+lib/*/*.a
+lib/*/*.so
+usr/include/attr/
+usr/share/man/man2/
+usr/share/man/man3/
