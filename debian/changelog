@@ -17,6 +17,7 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
   * Remove Priority required from shared library package.
   * Cleanup debian/rules:
     - Use $(CURDIR) instead of `pwd`.
+    - Remove phase prints and comment out DH_VERBOSE, make it verbose enough.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
