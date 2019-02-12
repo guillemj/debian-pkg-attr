@@ -18,7 +18,7 @@ else
 endif
 
 confflags += \
-	--libdir=/lib/$(DEB_HOST_MULTIARCH) \
+	--libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
 	--libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
 	$(nil)
 

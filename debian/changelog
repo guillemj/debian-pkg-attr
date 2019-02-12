@@ -40,6 +40,8 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
     Thanks to Ivo De Decker <ivo.dedecker@ugent.be>.
   * Improve a bit the package descriptions.
   * Remove ancient versioned dpkg-dev Build-Depends.
+  * Perform a proper and correct /usr-merge transition by moving the package
+    contents from / to /usr.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
 
