@@ -1,4 +1,4 @@
-attr (1:2.4.47-3) UNRELEASED; urgency=medium
+attr (1:2.4.47-3) unstable; urgency=medium
 
   * Salvage package, with ok from co-maintainer.
     Thanks for all their past work on this package. Closes: #921975
@@ -43,7 +43,7 @@ attr (1:2.4.47-3) UNRELEASED; urgency=medium
   * Perform a proper and correct /usr-merge transition by moving the package
     contents from / to /usr.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:49:30 +0100
+ -- Guillem Jover <guillem@debian.org>  Tue, 12 Feb 2019 03:42:45 +0100
 
 attr (1:2.4.47-2) unstable; urgency=medium
 
