@@ -1,2 +1,2 @@
 version=3
-http://download.savannah.gnu.org/releases-noredirect/attr/ attr-([\d]+[\d\.]*).src.tar.gz
+https://download.savannah.gnu.org/releases/attr/attr-(\d.*?)(?:\.src)?\.(?:tgz|tbz2|txz|tar\.(?:gz|bz2|xz))
