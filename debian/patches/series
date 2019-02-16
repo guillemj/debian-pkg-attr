@@ -1,3 +1,4 @@
+15-test-perl-warning.patch
 00-no-debian-Makefile.patch
 01-configure.in.patch
 02-687531-fix-missing-ldflags.patch

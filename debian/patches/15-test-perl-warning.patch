@@ -1,0 +1,31 @@
+---
+ test/Makefile |    4 ++--
+ test/run      |    2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+--- a/test/run
++++ b/test/run
+@@ -84,7 +84,7 @@ for (;;) {
+   if (defined $line) {
+     # Substitute %VAR and %{VAR} with environment variables.
+     $line =~ s[%(\w+)][$ENV{$1}]eg;
+-    $line =~ s[%{(\w+)}][$ENV{$1}]eg;
++    $line =~ s[%\{(\w+)\}][$ENV{$1}]eg;
+   }
+   if (defined $line) {
+     if ($line =~ s/^\s*< ?//) {
+--- a/test/Makefile
++++ b/test/Makefile
+@@ -40,10 +40,10 @@ $(TEST):
+ 	@echo "*** $@ ***"; perl run $@
+ 
+ $(EXT):
+-	@echo "EXT specific tests"; @echo "*** $@ ***"; perl run $@
++	@echo "EXT specific tests"; echo "*** $@ ***"; perl run $@
+ 
+ $(ROOT):
+-	@echo "Note: Tests must run as root"; @echo "*** $@ ***"; perl run $@
++	@echo "Note: Tests must run as root"; echo "*** $@ ***"; perl run $@
+ 
+ .PHONY: $(TEST) $(EXT) $(ROOT)
+ .NOTPARALLEL:

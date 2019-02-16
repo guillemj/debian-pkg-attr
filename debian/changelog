@@ -4,6 +4,9 @@ attr (1:2.4.47-4) UNRELEASED; urgency=medium
     on non-Linux systems.
   * Reorganize binary package fields.
   * Do not install unnecessary or repeated internal documentation.
+  * Fix upstream test suite:
+    - Fix perl warning due to deprecated regex construct.
+    - Remove bogus @ from shell subcommand in Makefile.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 16 Feb 2019 02:34:12 +0100
 
