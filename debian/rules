@@ -37,6 +37,14 @@ config: .census
 	$(options) $(MAKE) configure LOCAL_CONFIGURE_OPTIONS="$(confflags)"
 	touch .census
 
+check: built
+	dh_testdir
+	
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) -C test tests || true
+endif
+
+
 clean:
 	dh_testdir
 	-rm -f built .census
@@ -45,7 +53,7 @@ clean:
 
 binary-indep:
 
-binary-arch: built
+binary-arch: check
 	dh_testdir
 	dh_testroot
 	

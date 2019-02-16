@@ -7,6 +7,8 @@ attr (1:2.4.47-4) UNRELEASED; urgency=medium
   * Fix upstream test suite:
     - Fix perl warning due to deprecated regex construct.
     - Remove bogus @ from shell subcommand in Makefile.
+  * Hook the upstream test suite into both the package build and autopkgtest.
+    For now ignore failures, and mark it as superficial.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 16 Feb 2019 02:34:12 +0100
 
