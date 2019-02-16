@@ -15,12 +15,12 @@ Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/attr.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/attr.git
 
 Package: attr
+Architecture: any
+Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libattr1 (= ${binary:Version}),
-Architecture: any
-Multi-Arch: foreign
 Description: utilities for manipulating filesystem extended attributes
  A set of tools for manipulating extended attributes on filesystem
  objects, in particular getfattr(1) and setfattr(1).
@@ -29,6 +29,8 @@ Description: utilities for manipulating filesystem extended attributes
 
 Package: libattr1-dev
 Section: libdevel
+Architecture: any
+Multi-Arch: same
 Depends:
  ${misc:Depends},
  libc6-dev | libc-dev,
@@ -39,8 +41,6 @@ Replaces:
  attr-dev,
 Conflicts:
  attr-dev,
-Architecture: any
-Multi-Arch: same
 Description: extended attributes handling - static libraries and headers
  This package contains the libraries and header files needed to develop
  programs which make use of extended attributes.  For Linux programs,
@@ -52,35 +52,35 @@ Description: extended attributes handling - static libraries and headers
  used by programs such as xfsdump(8), xfsrestore(8) and xfs_fsr(8).
 
 Package: libattr1
-Depends:
- ${shlibs:Depends},
- ${misc:Depends},
 Section: libs
 Architecture: any
 Multi-Arch: same
 Pre-Depends:
  ${misc:Pre-Depends},
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
 Description: extended attribute handling - shared library
  Contains the runtime environment required by programs that make use
  of extended attributes.
 
 Package: attr-udeb
 Package-Type: udeb
+Section: debian-installer
+Architecture: any
+Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libattr1-udeb (= ${binary:Version}),
-Section: debian-installer
-Architecture: any
-Multi-Arch: foreign
 Description: utilities for manipulating filesystem extended attributes
 
 Package: libattr1-udeb
 Package-Type: udeb
-Depends:
- ${shlibs:Depends},
- ${misc:Depends},
 Section: debian-installer
 Architecture: any
 Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
 Description: extended attribute handling - shared library
