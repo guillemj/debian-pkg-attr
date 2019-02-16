@@ -3,6 +3,7 @@ attr (1:2.4.47-4) UNRELEASED; urgency=medium
   * Restrict xattr syscall symbols as arch=linux-any. This fixes the builds
     on non-Linux systems.
   * Reorganize binary package fields.
+  * Do not install unnecessary or repeated internal documentation.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 16 Feb 2019 02:34:12 +0100
 
