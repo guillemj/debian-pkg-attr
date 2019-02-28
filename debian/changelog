@@ -36,6 +36,7 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
     attr_copy_action() function.
   * Add Build-Depends-Package field to the symbols file.
   * Enable all hardening build flags.
+  * Remove Multi-Arch fields from udeb packages.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
 

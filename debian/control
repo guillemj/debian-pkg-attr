@@ -68,7 +68,6 @@ Package: attr-udeb
 Package-Type: udeb
 Section: debian-installer
 Architecture: any
-Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -79,7 +78,6 @@ Package: libattr1-udeb
 Package-Type: udeb
 Section: debian-installer
 Architecture: any
-Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
