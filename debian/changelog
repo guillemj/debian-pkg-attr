@@ -41,6 +41,7 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
     well with the Debian buildd environment.
   * Add build-essential to autopkgtest Depends fields.
   * Remove trailing whitespace and blank lines from debian/copyright.
+  * Fix several typos in the man pages.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
 

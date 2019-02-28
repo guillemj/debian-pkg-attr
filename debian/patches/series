@@ -12,3 +12,4 @@
 attr-autoconf-version-check.patch
 syscalls-linux.patch
 compat-xattr-header.patch
+man-pages-typo-fixes.patch
