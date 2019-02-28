@@ -32,6 +32,8 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
     - Update debian/copyright file.
     - The package should build now on musl. Closes: #782830
   * Include new pkg-config file.
+  * Include /etc/xattr.conf in shared library package, required by
+    attr_copy_action() function.
   * Add Build-Depends-Package field to the symbols file.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
