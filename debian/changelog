@@ -1,4 +1,4 @@
-attr (1:2.4.48-1) UNRELEASED; urgency=medium
+attr (1:2.4.48-1) unstable; urgency=medium
 
   * New upstream release.
     - Add upstream signing key, and modify debian/watch file to fetch and
@@ -43,7 +43,7 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
   * Remove trailing whitespace and blank lines from debian/copyright.
   * Fix several typos in the man pages.
 
- -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
+ -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 03:55:50 +0100
 
 attr (1:2.4.47-4) unstable; urgency=medium
 
