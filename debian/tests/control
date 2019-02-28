@@ -1,7 +1,7 @@
 Tests: test-func
 Restrictions: flaky rw-build-tree
-Depends: attr
+Depends: build-essential, attr
 
 Tests: test-func-root
 Restrictions: flaky rw-build-tree needs-root
-Depends: attr
+Depends: build-essential, attr

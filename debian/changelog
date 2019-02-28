@@ -39,6 +39,7 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
   * Remove Multi-Arch fields from udeb packages.
   * Mark autopkgtest tests as flaky instead of superficial, they do not cope
     well with the Debian buildd environment.
+  * Add build-essential to autopkgtest Depends fields.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
 
