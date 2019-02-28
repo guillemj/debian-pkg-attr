@@ -23,11 +23,7 @@ Comment:
  can be found in '/usr/share/common-licenses/GPL-2'.
 
 Files:
- include/attributes.h
- include/error_context.h
- include/misc.h
- include/walk_tree.h
- include/xattr.h
+ include/*.h
  libattr/*.c
  libmisc/*.c
 Copyright:

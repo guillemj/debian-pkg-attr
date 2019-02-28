@@ -2,7 +2,8 @@ libattr.so.1 libattr1 #MINVER#
  ATTR_1.0@ATTR_1.0 1:2.4.44
  ATTR_1.1@ATTR_1.1 1:2.4.44
  ATTR_1.2@ATTR_1.2 1:2.4.44
- attr_copy_action@Base 1:2.4.44
+ ATTR_1.3@ATTR_1.3 1:2.4.48
+ attr_copy_action@ATTR_1.3 1:2.4.48
  attr_copy_check_permissions@ATTR_1.1 1:2.4.44
  attr_copy_fd@ATTR_1.1 1:2.4.44
  attr_copy_file@ATTR_1.1 1:2.4.44
