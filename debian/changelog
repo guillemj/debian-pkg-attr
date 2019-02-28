@@ -31,6 +31,7 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
     - Update autopkgtests to handle the modernized upstream build system.
     - Update debian/copyright file.
     - The package should build now on musl. Closes: #782830
+  * Include new pkg-config file.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
 
