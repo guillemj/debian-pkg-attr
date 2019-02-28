@@ -1,7 +1,7 @@
 Tests: test-func
-Restrictions: superficial rw-build-tree
+Restrictions: flaky rw-build-tree
 Depends: attr
 
 Tests: test-func-root
-Restrictions: superficial rw-build-tree needs-root
+Restrictions: flaky rw-build-tree needs-root
 Depends: attr

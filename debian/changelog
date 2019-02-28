@@ -37,6 +37,8 @@ attr (1:2.4.48-1) UNRELEASED; urgency=medium
   * Add Build-Depends-Package field to the symbols file.
   * Enable all hardening build flags.
   * Remove Multi-Arch fields from udeb packages.
+  * Mark autopkgtest tests as flaky instead of superficial, they do not cope
+    well with the Debian buildd environment.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 27 Feb 2019 23:36:22 +0100
 
