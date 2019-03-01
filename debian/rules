@@ -82,4 +82,4 @@ binary-arch: build-arch
 
 binary: binary-indep binary-arch
 
-.PHONY: build-arch build-indep build binary binary-arch binary-indep clean
+.PHONY: build-arch build-indep build binary-arch binary-indep binary clean
