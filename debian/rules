@@ -14,6 +14,10 @@ else
 	confflags += --host $(DEB_HOST_GNU_TYPE) --build $(DEB_BUILD_GNU_TYPE)
 endif
 
+ifeq (,$(filter terse,$(DEB_BUILD_OPTIONS)))
+  confflags += --disable-silent-rules
+endif
+
 config.status: configure
 	dh_testdir
 	dh_update_autotools_config
@@ -24,7 +28,6 @@ config.status: configure
 	  CFLAGS="$(CFLAGS)" \
 	  LDFLAGS="$(LDFLAGS)" \
 	  $(confflags) \
-	  --disable-silent-rules \
 	  --prefix=/usr \
 	  --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 
@@ -32,7 +35,7 @@ build-indep:
 build-arch: config.status
 	dh_testdir
 	
-	$(MAKE) VERBOSE=1
+	$(MAKE)
 	
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	$(MAKE) check VERBOSE=1 || true
