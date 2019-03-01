@@ -9,7 +9,7 @@
 0008-attr_multi-attr_multif-Don-t-set-errno-to-EINVAL.patch
 0009-attr_list-attr_listf-Guard-against-unterminated-buff.patch
 # Local patches
-attr-autoconf-version-check.patch
+build-require-autoconf-version.patch
 syscalls-linux.patch
 compat-xattr-header.patch
 man-pages-typo-fixes.patch
