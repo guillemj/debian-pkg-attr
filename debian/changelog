@@ -1,3 +1,9 @@
+attr (1:2.4.48-4) UNRELEASED; urgency=medium
+
+  * Replace gettext with autopoint in autopkgtest Depends fields.
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 01 Mar 2019 23:00:35 +0100
+
 attr (1:2.4.48-3) unstable; urgency=medium
 
   * Run «autoreconf -f -i» in autopkgtests to handle modified build system
