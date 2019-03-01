@@ -10,6 +10,7 @@ attr (1:2.4.48-2) UNRELEASED; urgency=medium
   * Remove spurious escaped newline in «make install».
   * Uniformize assignment of --build and --host options for configure.
   * Reorder .PHONY entries.
+  * Add minimally required build dependencies to autopkgtest Depends fields.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 01 Mar 2019 01:01:40 +0100
 
