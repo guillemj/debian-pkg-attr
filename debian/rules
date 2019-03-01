@@ -61,7 +61,7 @@ binary-arch: build-arch
 	dh_prep
 	dh_installdirs
 	
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp \
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 	
 	dh_install
 	dh_installdocs
