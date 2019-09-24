@@ -12,4 +12,5 @@
 build-require-autoconf-version.patch
 syscalls-linux.patch
 compat-xattr-header.patch
+l10n-update-nl.patch
 man-pages-typo-fixes.patch
