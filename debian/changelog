@@ -6,6 +6,7 @@ attr (1:2.4.48-5) UNRELEASED; urgency=medium
     Thanks to Frans Spiesschaert <Frans.Spiesschaert@yucom.be>.
   * Fix attr(1) man page to remove the notion that it is XFS-specific.
     Closes: #883661
+  * Fix man pages to stop using mdoc specific macros.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:54:17 +0200
 

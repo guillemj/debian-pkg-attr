@@ -15,3 +15,4 @@ compat-xattr-header.patch
 l10n-update-nl.patch
 man-pages-typo-fixes.patch
 man-attr-no-xfs-specific.patch
+man-fix-macros.patch
