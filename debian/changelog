@@ -4,6 +4,8 @@ attr (1:2.4.48-5) UNRELEASED; urgency=medium
   * Switch to Standards-Version 4.4.0 (no changes needed).
   * Update Dutch translation. Closes: #925922
     Thanks to Frans Spiesschaert <Frans.Spiesschaert@yucom.be>.
+  * Fix attr(1) man page to remove the notion that it is XFS-specific.
+    Closes: #883661
 
  -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:54:17 +0200
 
