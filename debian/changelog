@@ -1,6 +1,7 @@
 attr (1:2.4.48-5) UNRELEASED; urgency=medium
 
   * Switch to debhelper-compat (= 12) in Build-Depends from debian/compat.
+  * Switch to Standards-Version 4.4.0 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:54:17 +0200
 
