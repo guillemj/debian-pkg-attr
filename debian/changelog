@@ -7,6 +7,9 @@ attr (1:2.4.48-5) UNRELEASED; urgency=medium
   * Fix attr(1) man page to remove the notion that it is XFS-specific.
     Closes: #883661
   * Fix man pages to stop using mdoc specific macros.
+  * Fix cross-compilation for musl-based systems by bumping the minimum
+    required gettext version to the one that stopped checking for internal
+    GNU gettext symbols, which musl does not provide.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:54:17 +0200
 
