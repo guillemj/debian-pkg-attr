@@ -1,3 +1,10 @@
+attr (1:2.4.48-6) UNRELEASED; urgency=medium
+
+  * Update French translation. Closes: #942092
+    Thanks to Jean-Pierre Giraud <jenapierregiraud75@free.fr>.
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 21 Feb 2020 00:51:37 +0100
+
 attr (1:2.4.48-5) unstable; urgency=medium
 
   * Switch to debhelper-compat (= 12) in Build-Depends from debian/compat.
