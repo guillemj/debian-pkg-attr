@@ -72,7 +72,7 @@ binary-arch: build-arch
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N libattr1
-	dh_makeshlibs -p libattr1 -V 'libattr1 (>= 1:2.4.48)' --add-udeb libattr1-udeb
+	dh_makeshlibs -p libattr1 -V 'libattr1 (>= 1:2.4.48)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
