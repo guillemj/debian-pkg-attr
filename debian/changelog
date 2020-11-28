@@ -9,6 +9,7 @@ attr (1:2.4.48-6) UNRELEASED; urgency=medium
   * Add Forwarded information to patches.
   * Install xattr.conf from the staged installation directory instead of the
     source directory.
+  * Switch to the dh sequencer.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 21 Feb 2020 00:51:37 +0100
 
