@@ -1,2 +1,2 @@
-usr/etc/xattr.conf etc
+etc/xattr.conf
 usr/lib/*/*.so.*
