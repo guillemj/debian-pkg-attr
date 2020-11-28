@@ -3,6 +3,7 @@ Description: Only include the compat syscall stubs on Linux systems
  These are Linux specific syscalls. Other systems either already have
  these function on their libc, or would need different implementations.
  This restores the previous behavior before the build system modernization.
+Forwarded: yes
 
 ---
  configure.ac          |    6 ++++++

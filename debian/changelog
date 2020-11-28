@@ -6,6 +6,7 @@ attr (1:2.4.48-6) UNRELEASED; urgency=medium
   * Switch to debhelper compatibility level 13.
   * Do not pass --add-uedb to dh_makeshlibs, it is handled automatically now.
   * Add include/attr to debian/clean to fix building twice in a row.
+  * Add Forwarded information to patches.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 21 Feb 2020 00:51:37 +0100
 

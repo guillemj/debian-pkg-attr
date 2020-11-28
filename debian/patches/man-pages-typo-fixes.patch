@@ -1,6 +1,7 @@
 Author: Guillem Jover <guillem@debian.org>
 Description: Fix various typos
 Warned-by: lintian
+Forwarded: yes
 
 ---
  man/man1/getfattr.1    |    2 +-

@@ -5,6 +5,7 @@ Description: Fix for incompatibility with autoconf2.13
  version of autconf, whichever is installed, or to get a clear error
  message about the problem.
 Bug-Debian: https://bugs.debian.org/643587
+Forwarded: yes
 
 
 ---
