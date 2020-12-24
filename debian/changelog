@@ -1,4 +1,4 @@
-attr (1:2.4.48-6) UNRELEASED; urgency=medium
+attr (1:2.4.48-6) unstable; urgency=medium
 
   * Update French translation. Closes: #942092
     Thanks to Jean-Pierre Giraud <jenapierregiraud75@free.fr>.
@@ -12,7 +12,7 @@ attr (1:2.4.48-6) UNRELEASED; urgency=medium
   * Switch to the dh sequencer.
   * Add debian/upstream/metadata file.
 
- -- Guillem Jover <guillem@debian.org>  Fri, 21 Feb 2020 00:51:37 +0100
+ -- Guillem Jover <guillem@debian.org>  Thu, 24 Dec 2020 15:58:08 +0100
 
 attr (1:2.4.48-5) unstable; urgency=medium
 
