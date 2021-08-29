@@ -20,8 +20,8 @@ Forwarded: yes
  AC_PROG_CC
  AM_PROG_CC_C_O
  AC_USE_SYSTEM_EXTENSIONS
-@@ -49,6 +50,11 @@ dnl Automatically increment the revision
- LT_REVISION=$(echo "${PACKAGE_VERSION}" | tr -d .)
+@@ -54,6 +55,11 @@ fi
+ LT_REVISION=$(printf "%d%d%02d" "$1" "$2" "$3")
  AC_SUBST(LT_REVISION)
  
 +AS_CASE([$host_os],
