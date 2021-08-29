@@ -66,6 +66,7 @@ Description: extended attribute handling - shared library
 
 Package: attr-udeb
 Package-Type: udeb
+Build-Profiles: <!noudeb>
 Section: debian-installer
 Architecture: any
 Depends:
@@ -76,6 +77,7 @@ Description: utilities for manipulating filesystem extended attributes
 
 Package: libattr1-udeb
 Package-Type: udeb
+Build-Profiles: <!noudeb>
 Section: debian-installer
 Architecture: any
 Depends:

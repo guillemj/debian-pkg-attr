@@ -4,6 +4,7 @@ attr (1:2.5.1-1) UNRELEASED; urgency=medium
     - Remove upstream patches included in this release.
     - Refresh remaining patches.
     - Update upstream signing key.
+  * Add support for the noudeb build profile.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 09 Apr 2021 02:55:54 +0200
 
