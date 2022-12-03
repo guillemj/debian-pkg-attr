@@ -5,7 +5,7 @@ Description: Reintroduce removed xattr.h header for backwards compatibility.
  .
  We will later introduce a warning so that programs transition to the header
  provided by glibc.
-Forwarded: no
+Forwarded: not-needed
 
 ---
  include/Makemodule.am |    3 +++

@@ -1,6 +1,6 @@
 Author: Guillem Jover <guillem@debian.org>
 Description: Make the attr(1) man page non-XFS specific.
-Forwarded: no
+Forwarded: yes
 
 ---
  man/man1/attr.1 |   16 +++++++++-------
