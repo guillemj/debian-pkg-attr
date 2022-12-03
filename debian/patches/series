@@ -8,3 +8,4 @@ man-pages-typo-fixes.patch
 man-attr-no-xfs-specific.patch
 man-fix-macros.patch
 gettext-musl.patch
+0001-man-Use-apostrophe-instead-of-acute-accent.patch
