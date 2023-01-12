@@ -2,6 +2,9 @@ From f0718d1815ffa81217f687acaffa36947f27adc5 Mon Sep 17 00:00:00 2001
 From: Guillem Jover <guillem@hadrons.org>
 Date: Sat, 3 Dec 2022 13:03:10 +0100
 Subject: [PATCH attr] man: Use apostrophe instead of acute accent
+Origin: vendor
+Forwarded: yes
+Applied-Upstream: 2.5.1+, commit:cbdc7576a832f0d75d100945476cd21f159a2372
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

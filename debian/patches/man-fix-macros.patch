@@ -1,7 +1,9 @@
 Author: Guillem Jover <guillem@debian.org>
 Description: Fix man pages to remove mdoc-specific macros
 Warned-by: lintian
+Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.5.1+, commit:7262f57477dc04fe49627f933dceee7555499677
 
 ---
  man/man3/attr_get.3    |    1 -

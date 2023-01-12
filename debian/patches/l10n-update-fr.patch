@@ -1,6 +1,8 @@
 Author: Jean-Pierre Giraud <jenapierregiraud75@free.fr>
 Description: Update French translation
+Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.5.1+, commit:0b98fee216196613f91c0ca575739505771a41aa
 
 Closes: #942092
 

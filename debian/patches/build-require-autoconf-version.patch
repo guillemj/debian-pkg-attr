@@ -5,8 +5,9 @@ Description: Fix for incompatibility with autoconf2.13
  version of autconf, whichever is installed, or to get a clear error
  message about the problem.
 Bug-Debian: https://bugs.debian.org/643587
+Origin: vendor
 Forwarded: yes
-
+Applied-Upstream: 2.5.1+, commit:542311e511e6e32bfde74d705a3c1355a548aba2
 
 ---
  configure.ac |    1 +

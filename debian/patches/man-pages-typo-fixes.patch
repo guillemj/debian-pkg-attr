@@ -1,7 +1,9 @@
 Author: Guillem Jover <guillem@debian.org>
 Description: Fix various typos
 Warned-by: lintian
+Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.5.1+, commit:a56993dfa3b21c53afac3e79066d5094bbf12371
 
 ---
  man/man3/attr_multi.3  |    6 +++---

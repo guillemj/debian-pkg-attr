@@ -1,6 +1,8 @@
 Author: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>
 Description: Update Dutch translation
+Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.5.1+, commit:85996db8c05a320a1f80efe7876172681c17d289
 
 ---
  po/nl.po |  206 ++++++++++++++++++++++++++++++++-------------------------------

@@ -1,6 +1,8 @@
 Author: Guillem Jover <guillem@debian.org>
 Description: Make the attr(1) man page non-XFS specific.
-Forwarded: yes
+Origin: vendor
+Forwarded: https://lists.nongnu.org/archive/html/acl-devel/2020-02/msg00003.html
+Status: rejected-upstream
 
 ---
  man/man1/attr.1 |   16 +++++++++-------
