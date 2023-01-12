@@ -11,7 +11,7 @@ override_dh_auto_test:
 	dh_auto_test || true
 
 override_dh_installchangelogs:
-	dh_installchangelogs doc/CHANGES
+	dh_installchangelogs --no-trim doc/CHANGES
 
 override_dh_makeshlibs:
 	dh_makeshlibs -N libattr1
