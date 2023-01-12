@@ -3,6 +3,7 @@ attr (1:2.5.1-4) UNRELEASED; urgency=medium
   * Switch to Standards-Version 4.6.2 (no changes needed).
   * Do not trim debian/changelog.
   * Update debian/patches metadata.
+  * Make globs in debhelper fragment files more specific.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 12 Jan 2023 23:19:10 +0100
 

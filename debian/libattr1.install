@@ -1,2 +1,3 @@
 etc/xattr.conf
-usr/lib/*/*.so.*
+usr/lib/*/libattr.so.1
+usr/lib/*/libattr.so.1.*

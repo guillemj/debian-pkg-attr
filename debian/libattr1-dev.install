@@ -1,5 +1,5 @@
 usr/include/attr/
-usr/lib/*/*.a
-usr/lib/*/*.so
-usr/lib/*/pkgconfig/*.pc
+usr/lib/*/libattr.a
+usr/lib/*/libattr.so
+usr/lib/*/pkgconfig/libattr.pc
 usr/share/man/man3/
