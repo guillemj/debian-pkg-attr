@@ -4,6 +4,7 @@ attr (1:2.5.1-4) UNRELEASED; urgency=medium
   * Do not trim debian/changelog.
   * Update debian/patches metadata.
   * Make globs in debhelper fragment files more specific.
+  * Refresh upstream OpenPGP signing certificates.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 12 Jan 2023 23:19:10 +0100
 
