@@ -2,6 +2,7 @@ attr (1:2.5.1-5) UNRELEASED; urgency=medium
 
   * Wrap fields in debian/tests/control.
   * Apply upstream patches first then local ones in the debian/patches/series.
+  * Update manual page references from attr(5) to xattr(7).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 24 Dec 2023 19:44:44 +0100
 
