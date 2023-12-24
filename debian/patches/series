@@ -1,11 +1,12 @@
-# Local patches
+# Upstream patches
 build-require-autoconf-version.patch
 syscalls-linux.patch
-compat-xattr-header.patch
 l10n-update-nl.patch
 l10n-update-fr.patch
 man-pages-typo-fixes.patch
-man-attr-no-xfs-specific.patch
 man-fix-macros.patch
-gettext-musl.patch
 0001-man-Use-apostrophe-instead-of-acute-accent.patch
+# Local patches
+compat-xattr-header.patch
+man-attr-no-xfs-specific.patch
+gettext-musl.patch
