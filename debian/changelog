@@ -3,6 +3,15 @@ attr (1:2.5.1-5) UNRELEASED; urgency=medium
   * Wrap fields in debian/tests/control.
   * Apply upstream patches first then local ones in the debian/patches/series.
   * Update manual page references from attr(5) to xattr(7).
+  * Rework attr(1) manual page:
+    - Fix formatting markup.
+    - Use namespace instead of address space.
+    - Update xattr namespaces used.
+    - Make it clear the command is a legacy tool for compatibility with
+      the IRIX command of the same name.
+    - Mention that the initial intended filesystem was XFS, but can work
+      with other filesystems.
+    - Change reference to xfsdump() to reference to GNU tar xattr support.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 24 Dec 2023 19:44:44 +0100
 

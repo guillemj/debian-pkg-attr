@@ -9,5 +9,6 @@ man-fix-macros.patch
 0001-man-Use-apostrophe-instead-of-acute-accent.patch
 # Local patches
 compat-xattr-header.patch
-man-attr-no-xfs-specific.patch
 gettext-musl.patch
+0001-man-Fix-formatting-markup-for-attr-1.patch
+0002-man-Clarify-attr-1-manual-page.patch

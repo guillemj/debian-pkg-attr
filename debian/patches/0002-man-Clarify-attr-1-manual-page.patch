@@ -1,0 +1,138 @@
+From 7d3152805d9f5847b9c4fd869396d9cc372ce191 Mon Sep 17 00:00:00 2001
+From: Guillem Jover <guillem@hadrons.org>
+Date: Sun, 24 Dec 2023 20:20:53 +0100
+Subject: [PATCH attr 2/2] man: Clarify attr(1) manual page
+Origin: vendor
+Forwarded: https://lists.nongnu.org/archive/html/acl-devel/2020-02/msg00003.html
+
+- Use namespace instead of address space.
+- Update xattr namespaces used.
+- Make it clear the command is a legacy tool for compatibility with
+  the IRIX command of the same name.
+- Mention that the initial intended filesystem was XFS, but can work
+  with other filesystems.
+- Change reference to xfsdump() to reference to GNU tar xattr support.
+
+Signed-off-by: Guillem Jover <guillem@hadrons.org>
+---
+ man/man1/attr.1 | 58 ++++++++++++++++++++++++-------------------------
+ 1 file changed, 29 insertions(+), 29 deletions(-)
+
+diff --git a/man/man1/attr.1 b/man/man1/attr.1
+index afc8d6c..037b50d 100644
+--- a/man/man1/attr.1
++++ b/man/man1/attr.1
+@@ -22,7 +22,7 @@
+ .\"
+ .TH ATTR 1 "Extended Attributes" "Dec 2001" "XFS Compatibility API"
+ .SH NAME
+-attr \- extended attributes on XFS filesystem objects
++attr \- legacy tool to handle extended attributes on filesystem objects
+ .SH SYNOPSIS
+ .nf
+ \fBattr\fP [ \fB\-LRSq\fP ] \fB\-s\fP \fIattrname\fP [ \fB\-V\fP \fIattrvalue\fP ] \c
+@@ -37,13 +37,15 @@ attr \- extended attributes on XFS filesystem objects
+ .fi
+ .SH OVERVIEW
+ Extended attributes implement the ability for a user to attach
+-name:value pairs to objects within the XFS filesystem.
++name:value pairs to objects within the filesystem.
+ .PP
+ This document describes the
+ .B attr
+ command, which is mostly compatible with the IRIX command of the same name.
+-It is thus aimed specifically at users of the XFS filesystem - for
+-filesystem independent extended attribute manipulation, consult the
++It was originally aimed specifically at users of the XFS filesystem, even
++though it can be used now on any filesystem that supports extended attributes,
++but for the generic and more portable interface for filesystem independent
++extended attribute manipulation, consult the
+ .BR getfattr (1)
+ and
+ .BR setfattr (1)
+@@ -55,7 +57,7 @@ use the Kanji character set when displaying that document
+ and "thumbnail=..." could provide a reduced resolution overview of a
+ high resolution graphic image.
+ .PP
+-In the XFS filesystem, the
++In supported filesystems, the
+ .I names
+ can be up to 256 bytes in length, terminated by the first 0 byte.
+ The intent is that they be printable ASCII (or other character set)
+@@ -64,30 +66,26 @@ The
+ .I values
+ can be up to 64KB of arbitrary binary data.
+ .PP
+-Attributes can be attached to all types of XFS inodes:
++Attributes can be attached to all types of inodes:
+ regular files, directories, symbolic links, device nodes, etc.
+ .PP
+-XFS uses 2 disjoint attribute name spaces associated with every
+-filesystem object.
+-They are the
+-.B root
+-and
+-.B user
+-address spaces.
+-The
+-.B root
+-address space is accessible only to the superuser,
+-and then only by specifying a flag argument to the function call.
+-Other users will not see or be able to modify attributes in the
+-.B root
+-address space.
+-The
++Extended attributes use several disjoint attribute namespaces associated with
++every filesystem object: the
++.B trusted
++(or
++.B xfsroot
++for compatibility with IRIX) namespace, only accessible and visible to the
++superuser and when requested explicitly with an option,
++the
++.B security
++namespace with the same properties except used for security metadata,
++and the
+ .B user
+-address space is protected by the normal file permissions mechanism,
++namespace, which is protected by the normal file permissions mechanism,
+ so the owner of the file can decide who is able to see and/or modify
+ the value of attributes on any particular file.
+ .SH DESCRIPTION
+-The
++The legacy
+ .B attr
+ utility allows the manipulation of extended attributes associated with
+ filesystem objects from within shell scripts.
+@@ -162,9 +160,11 @@ When the
+ .B \-R
+ option is given and the process has appropriate privileges,
+ operate in the
+-.B root
++.B trusted
++(or
++.BR xfsroot )
+ attribute namespace rather that the
+-.I USER
++.B user
+ attribute namespace.
+ .PP
+ The
+@@ -185,10 +185,10 @@ The standard file interchange/archive programs
+ .BR tar (1),
+ and
+ .BR cpio (1)
+-will not archive or restore extended attributes,
+-while the
+-.BR xfsdump (8)
+-program will.
++will not archive or restore extended attributes.
++Although GNU tar supports handling extended attributes with its
++.B \-\-xattrs
++option.
+ .SH "CAVEATS"
+ The list option present in the IRIX version of this command is not supported.
+ .B getfattr
+-- 
+2.43.0
+
