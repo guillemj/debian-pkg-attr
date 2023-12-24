@@ -1,3 +1,9 @@
+attr (1:2.5.1-5) UNRELEASED; urgency=medium
+
+  * Wrap fields in debian/tests/control.
+
+ -- Guillem Jover <guillem@debian.org>  Sun, 24 Dec 2023 19:44:44 +0100
+
 attr (1:2.5.1-4) unstable; urgency=medium
 
   * Switch to Standards-Version 4.6.2 (no changes needed).
