@@ -1,4 +1,4 @@
-attr (1:2.5.1-5) UNRELEASED; urgency=medium
+attr (1:2.5.1-5) unstable; urgency=medium
 
   * Wrap fields in debian/tests/control.
   * Apply upstream patches first then local ones in the debian/patches/series.
@@ -13,7 +13,7 @@ attr (1:2.5.1-5) UNRELEASED; urgency=medium
       with other filesystems.
     - Change reference to xfsdump() to reference to GNU tar xattr support.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 24 Dec 2023 19:44:44 +0100
+ -- Guillem Jover <guillem@debian.org>  Mon, 25 Dec 2023 00:02:22 +0100
 
 attr (1:2.5.1-4) unstable; urgency=medium
 
