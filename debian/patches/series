@@ -1,12 +1,5 @@
 # Upstream patches
-0001-Fix-stale-attr-5-references.patch
-build-require-autoconf-version.patch
-syscalls-linux.patch
-l10n-update-nl.patch
-l10n-update-fr.patch
-man-pages-typo-fixes.patch
-man-fix-macros.patch
-0001-man-Use-apostrophe-instead-of-acute-accent.patch
+# <none>
 # Local patches
 compat-xattr-header.patch
 gettext-musl.patch
