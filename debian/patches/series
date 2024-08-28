@@ -1,7 +1,6 @@
 # Upstream patches
 # <none>
 # Local patches
-compat-xattr-header.patch
 gettext-musl.patch
 0001-man-Fix-formatting-markup-for-attr-1.patch
 0002-man-Clarify-attr-1-manual-page.patch
