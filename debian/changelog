@@ -1,4 +1,4 @@
-attr (1:2.5.2-2) UNRELEASED; urgency=medium
+attr (1:2.5.2-2) unstable; urgency=medium
 
   * Drop backwards compatibility <attr/xattr.h> header, provided by libc
     implementations as <sys/xattr.h>. It's been more than 5 years, since
@@ -10,7 +10,7 @@ attr (1:2.5.2-2) UNRELEASED; urgency=medium
   * Mention the origins of ENOATTR in man pages. Closes: #463119
   * Switch to Standards-Version 4.7.0 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Sat, 12 Oct 2024 19:31:16 +0200
+ -- Guillem Jover <guillem@debian.org>  Sat, 12 Oct 2024 20:00:33 +0200
 
 attr (1:2.5.2-1) unstable; urgency=medium
 
