@@ -8,6 +8,7 @@ attr (1:2.5.2-2) UNRELEASED; urgency=medium
   * Take patch from upstream to add include <libgen.h> header for basename(2)
     to fix build failure on musl systems. Closes: #1070123
   * Mention the origins of ENOATTR in man pages. Closes: #463119
+  * Switch to Standards-Version 4.7.0 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sat, 12 Oct 2024 19:31:16 +0200
 
