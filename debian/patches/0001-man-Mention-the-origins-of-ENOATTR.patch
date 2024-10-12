@@ -1,0 +1,102 @@
+From f15ec7aa1a9253636b41301265fd4175a695294c Mon Sep 17 00:00:00 2001
+From: Guillem Jover <guillem@hadrons.org>
+Date: Sat, 12 Oct 2024 19:55:38 +0200
+Subject: [PATCH attr] man: Mention the origins of ENOATTR
+
+If the system libc does not define this error code, then the libattr
+<attr/attributes.h> header will define it to ENODATA. Mention this
+so that users of the API do not get confused by an error code that is
+rather uncommon.
+
+Origin: vendor
+Bug-Debian: https://bugs.debian.org/463119
+Forwarded: no
+---
+ man/man3/attr_get.3    | 5 +++++
+ man/man3/attr_list.3   | 5 +++++
+ man/man3/attr_multi.3  | 3 +++
+ man/man3/attr_remove.3 | 5 +++++
+ man/man3/attr_set.3    | 5 +++++
+ 5 files changed, 23 insertions(+)
+
+diff --git a/man/man3/attr_get.3 b/man/man3/attr_get.3
+index 2e2c475..a0a558c 100644
+--- a/man/man3/attr_get.3
++++ b/man/man3/attr_get.3
+@@ -91,6 +91,11 @@ will fail if one or more of the following are true:
+ \%[ENOATTR]
+ The attribute name given is not associated with the indicated
+ filesystem object.
++If the system libc does not define this error code,
++then libattr will define it to
++.B ENODATA
++in
++.BR <attr/attributes.h> .
+ .TP
+ .SM
+ \%[E2BIG]
+diff --git a/man/man3/attr_list.3 b/man/man3/attr_list.3
+index 3035b1e..a560a45 100644
+--- a/man/man3/attr_list.3
++++ b/man/man3/attr_list.3
+@@ -240,6 +240,11 @@ or a pathname component is longer than
+ \%[ENOATTR]
+ .I attribute\^
+ does not exist for this file.
++If the system libc does not define this error code,
++then libattr will define it to
++.B ENODATA
++in
++.BR <attr/attributes.h> .
+ .PP
+ .B attr_listf\^
+ will fail if:
+diff --git a/man/man3/attr_multi.3 b/man/man3/attr_multi.3
+index f7b5c04..c12d647 100644
+--- a/man/man3/attr_multi.3
++++ b/man/man3/attr_multi.3
+@@ -164,6 +164,9 @@ If the \f4ATTR_REPLACE\fP flag is set,
+ the sub-operation will set the
+ .I am_error
+ field to ENOATTR if the named attribute does not already exist.
++(If the system libc does not define ENOATTR,
++then libattr will define it to ENODATA in
++.BR <attr/attributes.h> .)
+ If neither of those two flags are set and the attribute does not exist,
+ then the attribute will be created with the given value.
+ If neither of those two flags are set and the attribute already exists,
+diff --git a/man/man3/attr_remove.3 b/man/man3/attr_remove.3
+index a3a123b..cf632c6 100644
+--- a/man/man3/attr_remove.3
++++ b/man/man3/attr_remove.3
+@@ -79,6 +79,11 @@ will fail if one or more of the following are true:
+ \%[ENOATTR]
+ The attribute name given is not associated with the indicated
+ filesystem object.
++If the system libc does not define this error code,
++then libattr will define it to
++.B ENODATA
++in
++.BR <attr/attributes.h> .
+ .TP
+ .SM
+ \%[ENOENT]
+diff --git a/man/man3/attr_set.3 b/man/man3/attr_set.3
+index 6887652..c803638 100644
+--- a/man/man3/attr_set.3
++++ b/man/man3/attr_set.3
+@@ -113,6 +113,11 @@ will fail if one or more of the following are true:
+ \%[ENOATTR]
+ The attribute name given is not associated with the indicated
+ filesystem object and the ATTR_REPLACE flag bit was set.
++If the system libc does not define this error code,
++then libattr will define it to
++.B ENODATA
++in
++.BR <attr/attributes.h> .
+ .TP
+ .SM
+ \%[E2BIG]
+-- 
+2.45.2
+
