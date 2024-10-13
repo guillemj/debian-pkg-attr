@@ -35,6 +35,7 @@ attr (1:2.5.1-5) unstable; urgency=medium
     - Mention that the initial intended filesystem was XFS, but can work
       with other filesystems.
     - Change reference to xfsdump() to reference to GNU tar xattr support.
+    Closes: #1034439
 
  -- Guillem Jover <guillem@debian.org>  Mon, 25 Dec 2023 00:02:22 +0100
 
