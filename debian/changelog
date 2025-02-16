@@ -1,3 +1,10 @@
+attr (1:2.5.2-3) UNRELEASED; urgency=medium
+
+  * Update upstream Dutch translation. Closes: #1065512
+    Thanks to Frans Spiesschaert <Frans.Spiesschaert@yucom.be>.
+
+ -- Guillem Jover <guillem@debian.org>  Sun, 16 Feb 2025 19:39:00 +0100
+
 attr (1:2.5.2-2) unstable; urgency=medium
 
   * Drop backwards compatibility <attr/xattr.h> header, provided by libc
