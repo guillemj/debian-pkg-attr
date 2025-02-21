@@ -2,6 +2,7 @@ attr (1:2.5.2-3) UNRELEASED; urgency=medium
 
   * Update upstream Dutch translation. Closes: #1065512
     Thanks to Frans Spiesschaert <Frans.Spiesschaert@yucom.be>.
+  * Switch to Standards-Version 4.7.1 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 16 Feb 2025 19:39:00 +0100
 
