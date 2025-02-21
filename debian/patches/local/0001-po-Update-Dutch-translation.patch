@@ -1,8 +1,11 @@
 From b4733f6a5ff9a50168a3ab142996a3b6fb517a9c Mon Sep 17 00:00:00 2001
 From: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>
 Date: Sun, 13 Oct 2024 23:50:58 +0200
-Subject: [PATCH attr] po: Update Dutch translation
+Subject: [PATCH attr 1/7] po: Update Dutch translation
 
+Origin: vendor
+Bug-Debian: https://bugs.debian.org/1065512
+Forwarded: no
 Signed-off-by: Guillem Jover <guillem@hadrons.org>
 ---
  po/nl.po |   87 +++++++++++++++++++++++++++++++++------------------------------

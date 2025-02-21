@@ -1,10 +1,10 @@
-From 5eed133ce7e6262f6069531aaf303a762fd17179 Mon Sep 17 00:00:00 2001
+From ae4dbdb24a3cc108db293d248016e2f73debaaad Mon Sep 17 00:00:00 2001
 From: Guillem Jover <guillem@hadrons.org>
 Date: Sun, 24 Dec 2023 20:15:33 +0100
-Subject: [PATCH attr 1/2] man: Fix formatting markup for attr(1)
+Subject: [PATCH attr 3/7] man: Fix formatting markup for attr(1)
+
 Origin: vendor
 Forwarded: no
-
 Signed-off-by: Guillem Jover <guillem@hadrons.org>
 ---
  man/man1/attr.1 | 54 ++++++++++++++++++++++++-------------------------
@@ -164,5 +164,5 @@ index ebbd2ef..afc8d6c 100644
  .SH AUTHOR
  Andreas Gruenbacher,
 -- 
-2.43.0
+2.47.2
 

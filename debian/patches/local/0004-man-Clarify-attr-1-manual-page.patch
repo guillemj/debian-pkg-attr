@@ -1,9 +1,7 @@
-From 7d3152805d9f5847b9c4fd869396d9cc372ce191 Mon Sep 17 00:00:00 2001
+From 622be1ba3c92be641fb0e7337e0145b25ffc7461 Mon Sep 17 00:00:00 2001
 From: Guillem Jover <guillem@hadrons.org>
 Date: Sun, 24 Dec 2023 20:20:53 +0100
-Subject: [PATCH attr 2/2] man: Clarify attr(1) manual page
-Origin: vendor
-Forwarded: https://lists.nongnu.org/archive/html/acl-devel/2020-02/msg00003.html
+Subject: [PATCH attr 4/7] man: Clarify attr(1) manual page
 
 - Use namespace instead of address space.
 - Update xattr namespaces used.
@@ -13,6 +11,8 @@ Forwarded: https://lists.nongnu.org/archive/html/acl-devel/2020-02/msg00003.html
   with other filesystems.
 - Change reference to xfsdump() to reference to GNU tar xattr support.
 
+Origin: vendor
+Forwarded: https://lists.nongnu.org/archive/html/acl-devel/2020-02/msg00003.html
 Signed-off-by: Guillem Jover <guillem@hadrons.org>
 ---
  man/man1/attr.1 | 58 ++++++++++++++++++++++++-------------------------
@@ -134,5 +134,5 @@ index afc8d6c..037b50d 100644
  The list option present in the IRIX version of this command is not supported.
  .B getfattr
 -- 
-2.43.0
+2.47.2
 

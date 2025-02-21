@@ -1,7 +1,7 @@
-From f15ec7aa1a9253636b41301265fd4175a695294c Mon Sep 17 00:00:00 2001
+From 444b35222cd525f0496837b0cc2d35571ea741f2 Mon Sep 17 00:00:00 2001
 From: Guillem Jover <guillem@hadrons.org>
 Date: Sat, 12 Oct 2024 19:55:38 +0200
-Subject: [PATCH attr] man: Mention the origins of ENOATTR
+Subject: [PATCH attr 5/7] man: Mention the origins of ENOATTR
 
 If the system libc does not define this error code, then the libattr
 <attr/attributes.h> header will define it to ENODATA. Mention this
@@ -11,6 +11,7 @@ rather uncommon.
 Origin: vendor
 Bug-Debian: https://bugs.debian.org/463119
 Forwarded: no
+Signed-off-by: Guillem Jover <guillem@hadrons.org>
 ---
  man/man3/attr_get.3    | 5 +++++
  man/man3/attr_list.3   | 5 +++++
@@ -98,5 +99,5 @@ index 6887652..c803638 100644
  .SM
  \%[E2BIG]
 -- 
-2.45.2
+2.47.2
 

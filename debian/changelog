@@ -6,6 +6,7 @@ attr (1:2.5.2-3) UNRELEASED; urgency=medium
   * Improve markup and editorial changes for setfattr(1).
     Thanks to Bjarni Ingi Gislason <bjarniig@simnet.is>. Closes: #1092503
   * Improve font selection markup in man pages.
+  * Reorganize patches to clearly separate upstream from local ones.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 16 Feb 2025 19:39:00 +0100
 

@@ -1,10 +1,10 @@
 # Upstream patches
-0001-tools-attr.c-Add-missing-libgen.h-include-for-basena.patch
+upstream/0001-tools-attr.c-Add-missing-libgen.h-include-for-basena.patch
 # Local patches
-gettext-musl.patch
-0001-man-Fix-formatting-markup-for-attr-1.patch
-0002-man-Clarify-attr-1-manual-page.patch
-0001-man-Mention-the-origins-of-ENOATTR.patch
-0001-po-Update-Dutch-translation.patch
-0006-man-Improve-markup-and-editorial-changes-for-setfatt.patch
-0007-man-Use-f-letter-instead-of-f-number-to-select-fonts.patch
+local/0001-po-Update-Dutch-translation.patch
+local/0002-build-Fix-cross-compilation-on-musl-based-systems.patch
+local/0003-man-Fix-formatting-markup-for-attr-1.patch
+local/0004-man-Clarify-attr-1-manual-page.patch
+local/0005-man-Mention-the-origins-of-ENOATTR.patch
+local/0006-man-Improve-markup-and-editorial-changes-for-setfatt.patch
+local/0007-man-Use-f-letter-instead-of-f-number-to-select-fonts.patch
