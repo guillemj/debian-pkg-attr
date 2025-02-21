@@ -7,3 +7,4 @@ gettext-musl.patch
 0001-man-Mention-the-origins-of-ENOATTR.patch
 0001-po-Update-Dutch-translation.patch
 0006-man-Improve-markup-and-editorial-changes-for-setfatt.patch
+0007-man-Use-f-letter-instead-of-f-number-to-select-fonts.patch

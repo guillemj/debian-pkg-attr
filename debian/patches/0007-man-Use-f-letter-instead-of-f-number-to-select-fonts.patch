@@ -1,0 +1,350 @@
+From 756d8ee52a66ff9b8a22d9af1449b0461215a373 Mon Sep 17 00:00:00 2001
+From: Guillem Jover <guillem@hadrons.org>
+Date: Fri, 21 Feb 2025 11:09:10 +0100
+Subject: [PATCH attr 7/7] man: Use \f<letter> instead of \f<number> to select
+ fonts
+
+Origin: vendor
+Forwarded: no
+Signed-off-by: Guillem Jover <guillem@hadrons.org>
+---
+ man/man1/attr.1        | 24 ++++++++++++------------
+ man/man1/getfattr.1    | 16 ++++++++--------
+ man/man3/attr_get.3    |  8 ++++----
+ man/man3/attr_list.3   | 12 ++++++------
+ man/man3/attr_multi.3  | 26 +++++++++++++-------------
+ man/man3/attr_remove.3 |  4 ++--
+ man/man3/attr_set.3    | 12 ++++++------
+ 7 files changed, 51 insertions(+), 51 deletions(-)
+
+diff --git a/man/man1/attr.1 b/man/man1/attr.1
+index 037b50d..e2ae8f5 100644
+--- a/man/man1/attr.1
++++ b/man/man1/attr.1
+@@ -25,14 +25,14 @@
+ attr \- legacy tool to handle extended attributes on filesystem objects
+ .SH SYNOPSIS
+ .nf
+-\fBattr\fP [ \fB\-LRSq\fP ] \fB\-s\fP \fIattrname\fP [ \fB\-V\fP \fIattrvalue\fP ] \c
++\fBattr\fP [\fB\-LRSq\fP] \fB\-s\fP \fIattrname\fP [\fB\-V\fP \fIattrvalue\fP] \c
+ \fIpathname\fP
+ .sp .8v
+-\fBattr\fP [ \fB\-LRSq\fP ] \fB\-g\fP \fIattrname\fP \fIpathname\fP
++\fBattr\fP [\fB\-LRSq\fP] \fB\-g\fP \fIattrname\fP \fIpathname\fP
+ .sp .8v
+-\fBattr\fP [ \fB\-LRSq\fP ] \fB\-r\fP \fIattrname\fP \fIpathname\fP
++\fBattr\fP [\fB\-LRSq\fP] \fB\-r\fP \fIattrname\fP \fIpathname\fP
+ .sp .8v
+-\fBattr\fP [ \fB\-LRSq\fP ] \fB\-l\fP \fIpathname\fP
++\fBattr\fP [\fB\-LRSq\fP] \fB\-l\fP \fIpathname\fP
+ .sp .8v
+ .fi
+ .SH OVERVIEW
+@@ -99,11 +99,11 @@ The
+ .BR \-g " \fIattrname\fP"
+ option tells
+ .B attr
+-to search the named object and print (to \f4stdout\fP) the value
++to search the named object and print (to \f[BI]stdout\fP) the value
+ associated with that attribute name.
+ With the
+ .B \-q
+-flag, \f4stdout\fP will be exactly and only the value of the attribute,
++flag, \f[BI]stdout\fP will be exactly and only the value of the attribute,
+ suitable for storage directly into a file or processing via a piped command.
+ .TP
+ .B LIST
+@@ -115,7 +115,7 @@ to list the names of all the attributes that are associated with the object,
+ and the number of bytes in the value of each of those attributes.
+ With the
+ .B \-q
+-flag, \f4stdout\fP will be a simple list of only the attribute names,
++flag, \f[BI]stdout\fP will be a simple list of only the attribute names,
+ one per line, suitable for input into a script.
+ .TP
+ .B REMOVE
+@@ -132,7 +132,7 @@ The
+ .BR \-s " \fIattrname\fP"
+ option tells
+ .B attr
+-to set the named attribute of the object to the value read from \f4stdin\fP.
++to set the named attribute of the object to the value read from \f[BI]stdin\fP.
+ If an attribute with that name already exists,
+ its value will be replaced with this one.
+ If an attribute with that name does not already exist,
+@@ -141,10 +141,10 @@ With the
+ .BR \-V " \fIattrvalue\fP"
+ flag, the attribute will be set to have a value of
+ .I attrvalue
+-and \f4stdin\fP will not be read.
++and \f[BI]stdin\fP will not be read.
+ With the
+ .B \-q
+-flag, \f4stdout\fP will not be used.
++flag, \f[BI]stdout\fP will not be used.
+ Without the
+ .B \-q
+ flag, a message showing the attribute name and the entire value
+@@ -178,8 +178,8 @@ When the
+ option is given
+ .B attr
+ will try to keep quiet.
+-It will output error messages (to \f4stderr\fP)
+-but will not print status messages (to \f4stdout\fP).
++It will output error messages (to \f[BI]stderr\fP)
++but will not print status messages (to \f[BI]stdout\fP).
+ .SH "NOTES"
+ The standard file interchange/archive programs
+ .BR tar (1),
+diff --git a/man/man1/getfattr.1 b/man/man1/getfattr.1
+index df8bb8a..cf83b91 100644
+--- a/man/man1/getfattr.1
++++ b/man/man1/getfattr.1
+@@ -25,10 +25,10 @@
+ getfattr \- get extended attributes of filesystem objects
+ .SH SYNOPSIS
+ .nf
+-\f3getfattr\f1 [\f3\-hRLP\f1] \f3\-n name\f1 [\f3\-e en\f1] \c
+-\f3pathname\f1...
+-\f3getfattr\f1 [\f3\-hRLP\f1] \f3\-d\f1 [\f3\-e en\f1] \c
+-[\f3\-m pattern\f1] \f3pathname\f1...
++\fBgetfattr\fR [\fB\-hRLP\fR] \fB\-n name\fR [\fB\-e en\fR] \c
++\fBpathname\fR...
++\fBgetfattr\fR [\fB\-hRLP\fR] \fB\-d\fR [\fB\-e en\fR] \c
++[\fB\-m pattern\fR] \fBpathname\fR...
+ .fi
+ .SH DESCRIPTION
+ For each file,
+@@ -36,7 +36,7 @@ For each file,
+ displays the file name,
+ and the set of extended attribute names (and optionally values) which
+ are associated with that file. Per default only attributes in the user
+-namespace are displayed, see \f3\-m\f1.
++namespace are displayed, see \fB\-m\fR.
+ .PP
+ The output format of
+ .B "getfattr \-d"
+@@ -62,13 +62,13 @@ and
+ pairs associated with the specified file.
+ .SH OPTIONS
+ .TP 4
+-.BR \-n " \f2name\f1, " \-\-name "=\f2name\f1"
++.BR \-n " \fIname\fR, " \-\-name "=\fIname\fR"
+ Dump the value of the named extended attribute.
+ .TP
+ .BR \-d ", " \-\-dump
+ Dump the values of all matched extended attributes.
+ .TP
+-.BR \-e " \f2en\f1, " \-\-encoding "=\f2en\f1"
++.BR \-e " \fIen\fR, " \-\-encoding "=\fIen\fR"
+ Encode values after retrieving them.
+ Valid values of
+ .I en
+@@ -82,7 +82,7 @@ Do not dereference symlinks. Instead of the file a symlink refers to, the
+ symlink itself is examined.  Unless doing a logical (\-L) traversal, do not
+ traverse symlinks to directories.
+ .TP
+-.BR \-m " \f2pattern\f1, " \-\-match "=\f2pattern\f1"
++.BR \-m " \fIpattern\fR, " \-\-match "=\fIpattern\fR"
+ Only include attributes with names matching the regular expression
+ .IR pattern .
+ The default value for
+diff --git a/man/man3/attr_get.3 b/man/man3/attr_get.3
+index a0a558c..3313e08 100644
+--- a/man/man3/attr_get.3
++++ b/man/man3/attr_get.3
+@@ -29,11 +29,11 @@ attr_get, attr_getf \- get the value of a user attribute of a filesystem object
+ .nf
+ .B #include <attr/attributes.h>
+ .sp
+-.B "int attr_get (const char *\f2path\f3, const char *\f2attrname\f3, "
+-.B "              char *\f2attrvalue\f3, int *\f2valuelength\f3, int \f2flags\f3);"
++.B "int attr_get (const char *\fIpath\fB, const char *\fIattrname\fB, "
++.B "              char *\fIattrvalue\fB, int *\fIvaluelength\fB, int \fIflags\fB);"
+ .PP
+-.B "int attr_getf (int \f2fd\f3, const char *\f2attrname\f3, "
+-.B "               char *\f2attrvalue\f3, int *\f2valuelength\f3, int \f2flags\f3);"
++.B "int attr_getf (int \fIfd\fB, const char *\fIattrname\fB, "
++.B "               char *\fIattrvalue\fB, int *\fIvaluelength\fB, int \fIflags\fB);"
+ .SH DESCRIPTION
+ The
+ .B attr_get
+diff --git a/man/man3/attr_list.3 b/man/man3/attr_list.3
+index a560a45..ca121a1 100644
+--- a/man/man3/attr_list.3
++++ b/man/man3/attr_list.3
+@@ -53,7 +53,7 @@ The
+ will be filled with a structure describing at least a portion of the
+ attributes associated with the given filesystem object.
+ .I Buffer
+-will be overwritten with an \f4attrlist_t\fP structure
++will be overwritten with an \f[BI]attrlist_t\fP structure
+ containing a list of the attributes associated with
+ that filesystem object, up to a maximum of
+ .I buffersize
+@@ -64,7 +64,7 @@ must be sufficiently large to hold the appropriate data structures
+ plus at least one maximally sized attribute name,
+ but cannot be more than ATTR_MAX_VALUELEN (currently 64KB) bytes in length.
+ .PP
+-The contents of an \f4attrlist_t\fP structure include the following members:
++The contents of an \f[BI]attrlist_t\fP structure include the following members:
+ .P
+ .RS 3
+ .nf
+@@ -93,8 +93,8 @@ The
+ array contains the byte offset within the
+ .I buffer
+ of the structure describing each of the attributes,
+-an \f4attrlist_ent_t\fP structure.
+-The \f4ATTR_ENTRY(buffer, index)\fP macro will help with decoding the list.
++an \f[BI]attrlist_ent_t\fP structure.
++The \f[BI]ATTR_ENTRY(buffer, index)\fP macro will help with decoding the list.
+ It takes a pointer to the
+ .I buffer
+ and an
+@@ -102,9 +102,9 @@ and an
+ into the
+ .I al_offset
+ array and returns a pointer to the corresponding
+-\f4attrlist_ent_t\fP structure.
++\f[BI]attrlist_ent_t\fP structure.
+ .PP
+-The contents of an \f4attrlist_ent_t\fP structure
++The contents of an \f[BI]attrlist_ent_t\fP structure
+ include the following members:
+ .P
+ .RS 3
+diff --git a/man/man3/attr_multi.3 b/man/man3/attr_multi.3
+index c12d647..6103f38 100644
+--- a/man/man3/attr_multi.3
++++ b/man/man3/attr_multi.3
+@@ -29,11 +29,11 @@ attr_multi, attr_multif \- manipulate multiple user attributes on a filesystem o
+ .nf
+ .B #include <attr/attributes.h>
+ .sp
+-.B "int attr_multi (const char *\f2path\f3, attr_multiop_t *\f2oplist\f3, "
+-.B "                int \f2count\f3, int \f2flags\f3);"
++.B "int attr_multi (const char *\fIpath\fB, attr_multiop_t *\fIoplist\fB, "
++.B "                int \fIcount\fB, int \fIflags\fB);"
+ .PP
+-.B "int attr_multif (int \f2fd\f3, attr_multiop_t *\f2oplist\f3, "
+-.B "                 int \f2count\f3, int \f2flags\f3);"
++.B "int attr_multif (int \fIfd\fB, attr_multiop_t *\fIoplist\fB, "
++.B "                 int \fIcount\fB, int \fIflags\fB);"
+ .SH DESCRIPTION
+ The
+ .B attr_multi
+@@ -48,7 +48,7 @@ points to a path name for a filesystem object, and
+ refers to the file descriptor associated with a file.
+ The
+ .I oplist
+-is an array of \f4attr_multiop_t\fP structures.
++is an array of \f[BI]attr_multiop_t\fP structures.
+ Each element in that array describes a single attribute operation
+ and provides all the information required to carry out that operation
+ and to check for success or failure of that operation.
+@@ -57,7 +57,7 @@ tells how many elements are in the
+ .I oplist
+ array.
+ .PP
+-The contents of an \f4attr_multiop_t\fP structure include
++The contents of an \f[BI]attr_multiop_t\fP structure include
+ the following members:
+ .P
+ .RS 3
+@@ -97,7 +97,7 @@ if that sub-operation fails.
+ The result codes for a given sub-operation are a subset of
+ the result codes that are possible from the corresponding
+ single-attribute function call.
+-For example, the result code possible from an \f4ATTR_OP_GET\fP
++For example, the result code possible from an \f[BI]ATTR_OP_GET\fP
+ sub-operation are a subset of those that can be returned from an
+ .B attr_get
+ function call.
+@@ -134,7 +134,7 @@ After the operation, the
+ field contains the actual size of the attribute's value.
+ The
+ .I am_flags
+-field may be set to the \f4ATTR_ROOT\fP flag.
++field may be set to the \f[BI]ATTR_ROOT\fP flag.
+ If the process has appropriate privileges,
+ the ROOT namespace will be searched for the named attribute,
+ otherwise the USER namespace will be searched.
+@@ -146,21 +146,21 @@ The
+ and
+ .I am_length
+ fields contain the new value for the given attribute name and its length.
+-The \f4ATTR_ROOT\fP flag may be set in the
++The \f[BI]ATTR_ROOT\fP flag may be set in the
+ .I am_flags
+ field.
+ If the process has appropriate privileges,
+ the ROOT namespace will be searched for the named attribute,
+ otherwise the USER namespace will be searched.
+-The \f4ATTR_CREATE\fP and the \f4ATTR_REPLACE\fP flags
++The \f[BI]ATTR_CREATE\fP and the \f[BI]ATTR_REPLACE\fP flags
+ may also be set in the
+ .I am_flags
+ field (but not simultaneously).
+-If the \f4ATTR_CREATE\fP flag is set,
++If the \f[BI]ATTR_CREATE\fP flag is set,
+ the sub-operation will set the
+ .I am_error
+ field to EEXIST if the named attribute already exists.
+-If the \f4ATTR_REPLACE\fP flag is set,
++If the \f[BI]ATTR_REPLACE\fP flag is set,
+ the sub-operation will set the
+ .I am_error
+ field to ENOATTR if the named attribute does not already exist.
+@@ -181,7 +181,7 @@ and
+ fields are not used and are ignored.
+ The
+ .I am_flags
+-field may be set to the \f4ATTR_ROOT\fP flag.
++field may be set to the \f[BI]ATTR_ROOT\fP flag.
+ If the process has appropriate privileges,
+ the ROOT namespace will be searched for the named attribute,
+ otherwise the USER namespace will be searched.
+diff --git a/man/man3/attr_remove.3 b/man/man3/attr_remove.3
+index cf632c6..7f749fb 100644
+--- a/man/man3/attr_remove.3
++++ b/man/man3/attr_remove.3
+@@ -29,9 +29,9 @@ attr_remove, attr_removef \- remove a user attribute of a filesystem object
+ .nf
+ .B #include <attr/attributes.h>
+ .sp
+-.B "int attr_remove (const char *\f2path\f3, const char *\f2attrname\f3, int \f2flags\f3);"
++.B "int attr_remove (const char *\fIpath\fB, const char *\fIattrname\fB, int \fIflags\fB);"
+ .PP
+-.B "int attr_removef (int \f2fd\f3, const char *\f2attrname\f3, int \f2flags\f3);"
++.B "int attr_removef (int \fIfd\fB, const char *\fIattrname\fB, int \fIflags\fB);"
+ .SH DESCRIPTION
+ The
+ .B attr_remove
+diff --git a/man/man3/attr_set.3 b/man/man3/attr_set.3
+index c803638..1c76269 100644
+--- a/man/man3/attr_set.3
++++ b/man/man3/attr_set.3
+@@ -29,13 +29,13 @@ attr_set, attr_setf \- set the value of a user attribute of a filesystem object
+ .nf
+ .B #include <attr/attributes.h>
+ .sp
+-.B "int attr_set (const char *\f2path\f3, const char *\f2attrname\f3, "
+-.B "              const char *\f2attrvalue\f3, const int \f2valuelength\f3,"
+-.B "              int \f2flags\f3);"
++.B "int attr_set (const char *\fIpath\fB, const char *\fIattrname\fB, "
++.B "              const char *\fIattrvalue\fB, const int \fIvaluelength\fB,"
++.B "              int \fIflags\fB);"
+ .PP
+-.B "int attr_setf (int \f2fd\f3, const char *\f2attrname\f3, "
+-.B "               const char *\f2attrvalue\f3, const int \f2valuelength\f3,"
+-.B "               int \f2flags\f3);"
++.B "int attr_setf (int \fIfd\fB, const char *\fIattrname\fB, "
++.B "               const char *\fIattrvalue\fB, const int \fIvaluelength\fB,"
++.B "               int \fIflags\fB);"
+ .SH DESCRIPTION
+ The
+ .B attr_set
+-- 
+2.47.2
+
