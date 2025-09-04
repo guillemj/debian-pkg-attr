@@ -2,6 +2,7 @@ attr (1:2.5.2-4) UNRELEASED; urgency=medium
 
   * Remove «Rules-Requires-Root: no», which is the current default.
   * Remove «Priority: optional», which is the current default.
+  * Switch to debian/watch version 5.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:49:42 +0200
 
