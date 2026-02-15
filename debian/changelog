@@ -1,4 +1,4 @@
-attr (1:2.5.2-4) UNRELEASED; urgency=medium
+attr (1:2.5.2-4) unstable; urgency=medium
 
   * Remove «Rules-Requires-Root: no», which is the current default.
   * Remove «Priority: optional», which is the current default.
@@ -6,7 +6,7 @@ attr (1:2.5.2-4) UNRELEASED; urgency=medium
   * Add spaces around make assignment operators to distinguish from shell ones.
   * Switch to Standards-Version 4.7.3 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:49:42 +0200
+ -- Guillem Jover <guillem@debian.org>  Sun, 15 Feb 2026 14:26:01 +0100
 
 attr (1:2.5.2-3) unstable; urgency=medium
 
