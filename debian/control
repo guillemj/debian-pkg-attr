@@ -4,7 +4,7 @@ Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends:
  debhelper-compat (= 13),
  gettext,
-Standards-Version: 4.7.3
+Standards-Version: 4.7.4
 Homepage: https://savannah.nongnu.org/projects/attr/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/attr.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/attr.git
